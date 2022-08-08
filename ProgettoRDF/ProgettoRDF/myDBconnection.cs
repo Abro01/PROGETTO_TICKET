@@ -12,7 +12,7 @@ namespace ProgettoRDF
         public MySqlConnection cn;
         public void Connect()
         {
-            cn = new MySqlConnection("Datasource = 127.0.0.1;username=root;password=;database=a_p_train");
+            cn = new MySqlConnection("Datasource = 127.0.0.1;username=root;password=;database=a_p_ticket");
         }
     }
 }

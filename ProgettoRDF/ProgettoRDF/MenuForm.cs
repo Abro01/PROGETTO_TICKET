@@ -55,40 +55,7 @@ namespace ProgettoRDF
             con.cn.Close();
         }
 
-        private void btnRicerca_Click(object sender, EventArgs e)
-        {
-            string partenza = txtPartenza.Text.ToString();
-            string arrivo = txtArrivo.Text.ToString();
-
-            ricercaTratte(partenza, arrivo);
-        }
-
-        public void ricercaTratte(string partenza, string arrivo)
-        {
-            dt.Rows.Clear();
-
-            string query = "SELECT t.* " +
-                           "FROM tratte t, tratte_fermate tf, treni tr, fermate f " +
-                           "WHERE tr.CODTratta=t.ID AND t.ID=tf.CODTratta AND tf.CODFermata=f.ID " +
-                           "AND t.Partenza = '" + partenza + "' AND t.Arrivo = '" + arrivo + "'";
-            command = new MySqlCommand(query, con.cn);
-            da = new MySqlDataAdapter(command);
-            da.Fill(dt);
-
-            dtRisultati.DataSource = dt;
-        }
-
-        /*public void refresh()
-        {
-            string sqlRefresh = "SELECT * " +
-                                "FROM tratte t, tratte_fermate tf, treni tr, fermate f " +
-                                "WHERE tr.CODTratta=t.ID AND t.ID=tf.CODTratta AND tf.CODFermata=f.ID";
-
-            MySqlDataAdapter sda = new MySqlDataAdapter(sqlRefresh, con.cn);
-            DataSet ds = new System.Data.DataSet();
-            sda.Fill(ds);
-            dtRisultati.DataSource = dt;
-        }*/
+      
 
     }
 }

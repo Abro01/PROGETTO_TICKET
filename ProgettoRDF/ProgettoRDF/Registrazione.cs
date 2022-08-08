@@ -41,7 +41,7 @@ namespace ProgettoRDF
                 try
                 {
                     con.cn.Open();
-                    string query = $"INSERT INTO `utenti` (`ID`, `Email`, `Nome`, `Cognome`, `Username`, `Password`) VALUES ('', '" + textEmail.Text + "', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textUser.Text + "', MD5('" + textPassword.Text + "'));";
+                    string query = $"INSERT INTO `utenti` (`ID`, `Nome`, `Cognome`, `Username`, `Email`, `Password`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textUser.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'));";
                     MySqlCommand command = new MySqlCommand(query, con.cn);
                     command.ExecuteNonQuery();
                     MessageBox.Show(query);
