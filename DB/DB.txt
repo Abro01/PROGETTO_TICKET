@@ -1,0 +1,46 @@
+CREATE TABLE utenti(
+    ID int AUTO_INCREMENT NOT NULL,
+    Nome varchar(20) NOT NULL,
+   	Cognome varchar(20) NOT NULL,
+    Username varchar(30) NOT NULL,
+    Email varchar(30) NOT NULL UNIQUE,
+    Password varchar(100) NOT NULL,
+    PRIMARY KEY(ID)
+);
+
+CREATE TABLE organizzatori(
+    ID int AUTO_INCREMENT NOT NULL,
+    Societa varchar(30) NOT NULL,
+    pIVA varchar(50) NOT NULL,
+    CEO varchar(20) NOT NULL,
+    PRIMARY KEY(ID)
+);
+
+CREATE TABLE eventi(
+    ID int NOT NULL,
+    Genere varchar(20) NOT NULL,
+    Luogo varchar(20) NOT NULL,
+    Descrizione varchar(500) NOT NULL,
+    Nposti int NOT NULL,
+    CODOrganizzatore int NOT NULL,
+    PRIMARY KEY(ID),
+    FOREIGN KEY(CODOrganizzatore) REFERENCES organizzatori(ID)
+);
+
+CREATE TABLE biglietti(
+    ID int NOT NULL,
+    Costo int NOT NULL,
+    Premium ENUM("SI", "NO"),
+    CODEvento int NOT NULL,
+    PRIMARY KEY(ID),
+    FOREIGN KEY(CODEvento) REFERENCES eventi(ID)
+);
+
+CREATE TABLE utenti_biglietti(
+    ID int NOT NULL,
+    CODUtente int NOT NULL,
+    CODBiglietto int NOT NULL,
+    PRIMARY KEY(ID),
+    FOREIGN KEY(CODUtente) REFERENCES utenti(ID),
+    FOREIGN KEY(CODBiglietto) REFERENCES biglietti(ID)
+);
