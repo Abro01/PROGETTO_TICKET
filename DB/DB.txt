@@ -17,7 +17,7 @@ CREATE TABLE organizzatori(
 );
 
 CREATE TABLE eventi(
-    ID int NOT NULL,
+    ID int AUTO_INCREMENT NOT NULL,
     Genere varchar(20) NOT NULL,
     Luogo varchar(20) NOT NULL,
     Descrizione varchar(500) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE eventi(
 );
 
 CREATE TABLE biglietti(
-    ID int NOT NULL,
+    ID int AUTO_INCREMENT NOT NULL,
     Costo int NOT NULL,
     Premium ENUM("SI", "NO"),
     CODEvento int NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE biglietti(
 );
 
 CREATE TABLE utenti_biglietti(
-    ID int NOT NULL,
+    ID int AUTO_INCREMENT NOT NULL,
     CODUtente int NOT NULL,
     CODBiglietto int NOT NULL,
     PRIMARY KEY(ID),
