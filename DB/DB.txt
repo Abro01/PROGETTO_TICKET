@@ -8,12 +8,22 @@ CREATE TABLE utenti(
     PRIMARY KEY(ID)
 );
 
-CREATE TABLE organizzatori(
+CREATE TABLE organizzazione(
     ID int AUTO_INCREMENT NOT NULL,
-    Societa varchar(30) NOT NULL,
-    pIVA varchar(50) NOT NULL,
-    CEO varchar(20) NOT NULL,
+    Nome varchar(50) NOT NULL,
+    pIVA varchar(20) NOT NULL,
     PRIMARY KEY(ID)
+);
+
+CREATE TABLE ceo_organizzazioni(
+    ID int AUTO_INCREMENT NOT NULL,
+    Nome varchar(20) NOT NULL,
+    Cognome varchar(20) NOT NULL,
+    Email varchar(30) NOT NULL UNIQUE,
+    Password varchar(100) NOT NULL,
+    CODOrganizzazione int NOT NULL,
+    PRIMARY KEY(ID),
+    FOREIGN KEY(CODOrganizzazione) REFERENCES organizzazione(ID)
 );
 
 CREATE TABLE eventi(
@@ -22,9 +32,9 @@ CREATE TABLE eventi(
     Luogo varchar(20) NOT NULL,
     Descrizione varchar(500) NOT NULL,
     Nposti int NOT NULL,
-    CODOrganizzatore int NOT NULL,
+    CODOrganizzazione int NOT NULL,
     PRIMARY KEY(ID),
-    FOREIGN KEY(CODOrganizzatore) REFERENCES organizzatori(ID)
+    FOREIGN KEY(CODOrganizzazione) REFERENCES organizzazione(ID)
 );
 
 CREATE TABLE biglietti(

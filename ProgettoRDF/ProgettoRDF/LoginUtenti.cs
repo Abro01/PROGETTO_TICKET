@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace ProgettoRDF
 {
-    public partial class Login : Form
+    public partial class LoginUtenti : Form
     {
         myDBconnection con = new myDBconnection();
         MySqlCommand command;
@@ -20,7 +20,7 @@ namespace ProgettoRDF
 
         public static string emailIN, passwordIN;
 
-        public Login()
+        public LoginUtenti()
         {
             InitializeComponent();
             con.Connect();
@@ -98,7 +98,7 @@ namespace ProgettoRDF
 
         private void lnkRegistrazione_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Registrazione reg = new Registrazione();
+            RegistrazioneUtenti reg = new RegistrazioneUtenti();
             reg.Show();
             this.Hide();
         }

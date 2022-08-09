@@ -11,13 +11,13 @@ using MySql.Data.MySqlClient;
 
 namespace ProgettoRDF
 {
-    public partial class Registrazione : Form
+    public partial class RegistrazioneUtenti : Form
     {
         myDBconnection con = new myDBconnection();
         MySqlDataAdapter da;
         DataTable dt = new DataTable();
 
-        public Registrazione()
+        public RegistrazioneUtenti()
         {
             InitializeComponent();
             con.Connect();
@@ -45,7 +45,7 @@ namespace ProgettoRDF
                     MySqlCommand command = new MySqlCommand(query, con.cn);
                     command.ExecuteNonQuery();
                     MessageBox.Show(query);
-                    Login loginReg = new Login();
+                    LoginUtenti loginReg = new LoginUtenti();
                     loginReg.Show();
                     this.Hide();
                 }

@@ -52,11 +52,11 @@
     <Compile Include="Elementi\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="LoginUtenti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="LoginUtenti.Designer.cs">
+      <DependentUpon>LoginUtenti.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginInfo.cs" />
     <Compile Include="MenuForm.cs">
@@ -72,16 +72,22 @@
     <Compile Include="Profilo.Designer.cs">
       <DependentUpon>Profilo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registrazione.cs">
+    <Compile Include="RegistrazioneCEO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registrazione.Designer.cs">
-      <DependentUpon>Registrazione.cs</DependentUpon>
+    <Compile Include="RegistrazioneCEO.Designer.cs">
+      <DependentUpon>RegistrazioneCEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrazioneUtenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrazioneUtenti.Designer.cs">
+      <DependentUpon>RegistrazioneUtenti.cs</DependentUpon>
     </Compile>
     <Compile Include="Utente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="LoginUtenti.resx">
+      <DependentUpon>LoginUtenti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
@@ -98,8 +104,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registrazione.resx">
-      <DependentUpon>Registrazione.cs</DependentUpon>
+    <EmbeddedResource Include="RegistrazioneCEO.resx">
+      <DependentUpon>RegistrazioneCEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrazioneUtenti.resx">
+      <DependentUpon>RegistrazioneUtenti.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
