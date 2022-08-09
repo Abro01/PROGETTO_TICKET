@@ -84,5 +84,27 @@ namespace ProgettoRDF
             if (e.KeyValue == 13)
                 btnRegistrazione.PerformClick();
         }
+
+        private void rbUtente_CheckedChanged(object sender, EventArgs e)
+        {
+            cbOrg.Hide();
+            lCodOrg.Hide();
+            lbUser.Show();
+            textUser.Show();
+
+        }
+
+        private void rbOrganizzatore_CheckedChanged(object sender, EventArgs e)
+        {
+            lbUser.Hide();
+            textUser.Hide();
+            cbOrg.Show();
+            lCodOrg.Show();
+        }
+
+        private void RegistrazioneUtenti_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

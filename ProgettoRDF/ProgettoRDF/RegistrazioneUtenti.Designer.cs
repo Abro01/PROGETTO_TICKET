@@ -30,7 +30,7 @@ namespace ProgettoRDF
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrazioneUtenti));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,32 +40,34 @@ namespace ProgettoRDF
             this.textNome = new System.Windows.Forms.TextBox();
             this.textCognome = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
-            this.btnRegistrazione = new ProgettoRDF.Elementi.RJButton();
-            this.btnExit = new ProgettoRDF.Elementi.RJButton();
-            this.btnClear = new ProgettoRDF.Elementi.RJButton();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.rbOrganizzatore = new System.Windows.Forms.RadioButton();
+            this.rbUtente = new System.Windows.Forms.RadioButton();
+            this.cbOrg = new System.Windows.Forms.ComboBox();
+            this.lCodOrg = new System.Windows.Forms.Label();
+            this.btnClear = new ProgettoRDF.Elementi.RJButton();
+            this.btnExit = new ProgettoRDF.Elementi.RJButton();
+            this.btnRegistrazione = new ProgettoRDF.Elementi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(364, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "USERNAME";
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.Location = new System.Drawing.Point(243, 36);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(91, 18);
+            this.lbUser.TabIndex = 1;
+            this.lbUser.Text = "USERNAME";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(364, 95);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(243, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 26);
+            this.label2.Size = new System.Drawing.Size(53, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "EMAIL";
             // 
@@ -73,10 +75,9 @@ namespace ProgettoRDF
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(364, 138);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(243, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 26);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "NOME";
             // 
@@ -84,10 +85,9 @@ namespace ProgettoRDF
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(364, 180);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(243, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 26);
+            this.label4.Size = new System.Drawing.Size(88, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "COGNOME";
             // 
@@ -95,92 +95,101 @@ namespace ProgettoRDF
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(364, 228);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(243, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 26);
+            this.label5.Size = new System.Drawing.Size(95, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "PASSWORD";
             // 
             // textUser
             // 
-            this.textUser.Location = new System.Drawing.Point(549, 55);
-            this.textUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textUser.Location = new System.Drawing.Point(366, 36);
             this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(148, 26);
+            this.textUser.Size = new System.Drawing.Size(100, 20);
             this.textUser.TabIndex = 6;
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(549, 95);
-            this.textEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textEmail.Location = new System.Drawing.Point(366, 62);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(148, 26);
+            this.textEmail.Size = new System.Drawing.Size(100, 20);
             this.textEmail.TabIndex = 7;
             // 
             // textNome
             // 
-            this.textNome.Location = new System.Drawing.Point(549, 138);
-            this.textNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textNome.Location = new System.Drawing.Point(366, 90);
             this.textNome.Name = "textNome";
-            this.textNome.Size = new System.Drawing.Size(148, 26);
+            this.textNome.Size = new System.Drawing.Size(100, 20);
             this.textNome.TabIndex = 8;
             // 
             // textCognome
             // 
-            this.textCognome.Location = new System.Drawing.Point(549, 180);
-            this.textCognome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textCognome.Location = new System.Drawing.Point(366, 117);
             this.textCognome.Name = "textCognome";
-            this.textCognome.Size = new System.Drawing.Size(148, 26);
+            this.textCognome.Size = new System.Drawing.Size(100, 20);
             this.textCognome.TabIndex = 9;
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(549, 228);
-            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textPassword.Location = new System.Drawing.Point(366, 148);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(148, 26);
+            this.textPassword.Size = new System.Drawing.Size(100, 20);
             this.textPassword.TabIndex = 10;
             this.textPassword.UseSystemPasswordChar = true;
             this.textPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textPassword_KeyUp);
             // 
-            // btnRegistrazione
+            // Logo
             // 
-            this.btnRegistrazione.BackColor = System.Drawing.Color.White;
-            this.btnRegistrazione.BackgroundColor = System.Drawing.Color.White;
-            this.btnRegistrazione.Colore_bordo = System.Drawing.Color.Red;
-            this.btnRegistrazione.FlatAppearance.BorderSize = 0;
-            this.btnRegistrazione.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrazione.ForeColor = System.Drawing.Color.Red;
-            this.btnRegistrazione.Location = new System.Drawing.Point(506, 308);
-            this.btnRegistrazione.Name = "btnRegistrazione";
-            this.btnRegistrazione.Radius_bordo = 40;
-            this.btnRegistrazione.Size = new System.Drawing.Size(166, 60);
-            this.btnRegistrazione.Size_bordo = 2;
-            this.btnRegistrazione.TabIndex = 15;
-            this.btnRegistrazione.Text = "REGISTRATI";
-            this.btnRegistrazione.TextColor = System.Drawing.Color.Red;
-            this.btnRegistrazione.UseVisualStyleBackColor = false;
-            this.btnRegistrazione.Click += new System.EventHandler(this.btnRegistrazione_Click);
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(195, 270);
+            this.Logo.Margin = new System.Windows.Forms.Padding(2);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(552, 200);
+            this.Logo.TabIndex = 18;
+            this.Logo.TabStop = false;
             // 
-            // btnExit
+            // rbOrganizzatore
             // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.BackgroundColor = System.Drawing.Color.White;
-            this.btnExit.Colore_bordo = System.Drawing.Color.Red;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(332, 308);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Radius_bordo = 40;
-            this.btnExit.Size = new System.Drawing.Size(166, 60);
-            this.btnExit.Size_bordo = 2;
-            this.btnExit.TabIndex = 16;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.TextColor = System.Drawing.Color.Red;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.rbOrganizzatore.AutoSize = true;
+            this.rbOrganizzatore.Location = new System.Drawing.Point(591, 93);
+            this.rbOrganizzatore.Name = "rbOrganizzatore";
+            this.rbOrganizzatore.Size = new System.Drawing.Size(90, 17);
+            this.rbOrganizzatore.TabIndex = 20;
+            this.rbOrganizzatore.TabStop = true;
+            this.rbOrganizzatore.Text = "Organizzatore";
+            this.rbOrganizzatore.UseVisualStyleBackColor = true;
+            this.rbOrganizzatore.CheckedChanged += new System.EventHandler(this.rbOrganizzatore_CheckedChanged);
+            // 
+            // rbUtente
+            // 
+            this.rbUtente.AutoSize = true;
+            this.rbUtente.Checked = true;
+            this.rbUtente.Location = new System.Drawing.Point(591, 65);
+            this.rbUtente.Name = "rbUtente";
+            this.rbUtente.Size = new System.Drawing.Size(57, 17);
+            this.rbUtente.TabIndex = 19;
+            this.rbUtente.TabStop = true;
+            this.rbUtente.Text = "Utente";
+            this.rbUtente.UseVisualStyleBackColor = true;
+            this.rbUtente.CheckedChanged += new System.EventHandler(this.rbUtente_CheckedChanged);
+            // 
+            // cbOrg
+            // 
+            this.cbOrg.FormattingEnabled = true;
+            this.cbOrg.Location = new System.Drawing.Point(366, 35);
+            this.cbOrg.Name = "cbOrg";
+            this.cbOrg.Size = new System.Drawing.Size(121, 21);
+            this.cbOrg.TabIndex = 24;
+            // 
+            // lCodOrg
+            // 
+            this.lCodOrg.AutoSize = true;
+            this.lCodOrg.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCodOrg.Location = new System.Drawing.Point(205, 36);
+            this.lCodOrg.Name = "lCodOrg";
+            this.lCodOrg.Size = new System.Drawing.Size(145, 18);
+            this.lCodOrg.TabIndex = 25;
+            this.lCodOrg.Text = "ORGANIZZAZIONE";
             // 
             // btnClear
             // 
@@ -190,10 +199,11 @@ namespace ProgettoRDF
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.Red;
-            this.btnClear.Location = new System.Drawing.Point(678, 308);
+            this.btnClear.Location = new System.Drawing.Point(452, 200);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Radius_bordo = 40;
-            this.btnClear.Size = new System.Drawing.Size(166, 60);
+            this.btnClear.Size = new System.Drawing.Size(111, 39);
             this.btnClear.Size_bordo = 2;
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "CLEAR";
@@ -201,21 +211,56 @@ namespace ProgettoRDF
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // Logo
+            // btnExit
             // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(292, 415);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(828, 308);
-            this.Logo.TabIndex = 18;
-            this.Logo.TabStop = false;
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.BackgroundColor = System.Drawing.Color.White;
+            this.btnExit.Colore_bordo = System.Drawing.Color.Red;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Red;
+            this.btnExit.Location = new System.Drawing.Point(221, 200);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Radius_bordo = 40;
+            this.btnExit.Size = new System.Drawing.Size(111, 39);
+            this.btnExit.Size_bordo = 2;
+            this.btnExit.TabIndex = 16;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.TextColor = System.Drawing.Color.Red;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnRegistrazione
+            // 
+            this.btnRegistrazione.BackColor = System.Drawing.Color.White;
+            this.btnRegistrazione.BackgroundColor = System.Drawing.Color.White;
+            this.btnRegistrazione.Colore_bordo = System.Drawing.Color.Red;
+            this.btnRegistrazione.FlatAppearance.BorderSize = 0;
+            this.btnRegistrazione.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrazione.ForeColor = System.Drawing.Color.Red;
+            this.btnRegistrazione.Location = new System.Drawing.Point(337, 200);
+            this.btnRegistrazione.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrazione.Name = "btnRegistrazione";
+            this.btnRegistrazione.Radius_bordo = 40;
+            this.btnRegistrazione.Size = new System.Drawing.Size(111, 39);
+            this.btnRegistrazione.Size_bordo = 2;
+            this.btnRegistrazione.TabIndex = 15;
+            this.btnRegistrazione.Text = "REGISTRATI";
+            this.btnRegistrazione.TextColor = System.Drawing.Color.Red;
+            this.btnRegistrazione.UseVisualStyleBackColor = false;
+            this.btnRegistrazione.Click += new System.EventHandler(this.btnRegistrazione_Click);
             // 
             // RegistrazioneUtenti
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1181, 653);
+            this.ClientSize = new System.Drawing.Size(787, 424);
+            this.Controls.Add(this.lCodOrg);
+            this.Controls.Add(this.cbOrg);
+            this.Controls.Add(this.rbOrganizzatore);
+            this.Controls.Add(this.rbUtente);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnExit);
@@ -229,9 +274,9 @@ namespace ProgettoRDF
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.lbUser);
             this.Name = "RegistrazioneUtenti";
+            this.Load += new System.EventHandler(this.RegistrazioneUtenti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,7 +284,7 @@ namespace ProgettoRDF
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -253,5 +298,9 @@ namespace ProgettoRDF
         private Elementi.RJButton btnExit;
         private Elementi.RJButton btnClear;
         private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.RadioButton rbOrganizzatore;
+        private System.Windows.Forms.RadioButton rbUtente;
+        private System.Windows.Forms.ComboBox cbOrg;
+        private System.Windows.Forms.Label lCodOrg;
     }
 }
