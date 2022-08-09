@@ -54,7 +54,7 @@ namespace ProgettoRDF
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LoginUtenti logout = new LoginUtenti();
+            Login logout = new Login();
             logout.Show();
             this.Hide();
             con.cn.Close();

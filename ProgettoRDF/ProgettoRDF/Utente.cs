@@ -16,7 +16,7 @@ namespace ProgettoRDF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginUtenti());
+            Application.Run(new Login());
         }
     }
 }
