@@ -15,8 +15,8 @@ namespace ProgettoRDF
     {
         myDBconnection con = new myDBconnection();
         MySqlCommand command;
-        MySqlDataAdapter da;
         DataTable dt=new DataTable();
+        DataTable dataTable = new DataTable();
 
         public static string emailIN, passwordIN;
 
@@ -41,15 +41,27 @@ namespace ProgettoRDF
             try
             {
                 con.cn.Open();
-                /*command = new MySqlCommand("Select * from utenti", con.cn);
-                command.ExecuteNonQuery();
-                dt = new DataTable();
-                da = new MySqlDataAdapter(command);
-                da.Fill(dt);
-                dataGridView1.DataSource = dt.DefaultView;
-                con.cn.Close();*/
-                string query = "SELECT * FROM utenti WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
-                MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+
+                if(cbCEOlogin.Checked)
+                {
+                    string queryCEO = "SELECT * FROM ceo_organizzazioni WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
+                    MySqlDataAdapter da = new MySqlDataAdapter(queryCEO, con.cn);
+
+                    da.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        emailIN = textEmail.Text;
+                        passwordIN = textPassword.Text;
+                        LoginInfo.UserID = textEmail.Text;
+                        MenuCEO home = new MenuCEO();
+                        home.ShowDialog();
+                        this.Hide();
+                    }
+                }
+
+                string queryUtenti = "SELECT * FROM utenti WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
+                MySqlDataAdapter sda = new MySqlDataAdapter(queryUtenti, con.cn);
 
                 sda.Fill(dt);
 
@@ -58,11 +70,10 @@ namespace ProgettoRDF
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
                     LoginInfo.UserID = textEmail.Text;
-                    MenuForm home = new MenuForm();
+                    MenuUtenti home = new MenuUtenti();
                     home.ShowDialog();
                     this.Hide();
-                }
-                else
+                }else
                 {
                     MessageBox.Show("Dati inseriti errati", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textEmail.Clear();
@@ -71,15 +82,12 @@ namespace ProgettoRDF
                     textEmail.Focus();
                 }
 
-            }
-            catch (Exception ex)
+            }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                con.cn.Close();
-            }
+
+            con.cn.Close();
         }
         //Cancella i caratteri nelle textbox per permettere di effettuare un nuovo accesso
         private void btnClear_Click(object sender, EventArgs e)

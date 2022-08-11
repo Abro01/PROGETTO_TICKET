@@ -59,11 +59,17 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginInfo.cs" />
-    <Compile Include="MenuForm.cs">
+    <Compile Include="MenuCEO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <Compile Include="MenuCEO.Designer.cs">
+      <DependentUpon>MenuCEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuUtenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuUtenti.Designer.cs">
+      <DependentUpon>MenuUtenti.cs</DependentUpon>
     </Compile>
     <Compile Include="myDBconnection.cs" />
     <Compile Include="Profilo.cs">
@@ -83,8 +89,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
+    <EmbeddedResource Include="MenuUtenti.resx">
+      <DependentUpon>MenuUtenti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profilo.resx">
       <DependentUpon>Profilo.cs</DependentUpon>

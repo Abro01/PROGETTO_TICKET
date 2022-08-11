@@ -62,7 +62,7 @@ namespace ProgettoRDF
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            MenuForm home = new MenuForm();
+            MenuUtenti home = new MenuUtenti();
             home.ShowDialog();
             this.Hide();
             con.cn.Close();

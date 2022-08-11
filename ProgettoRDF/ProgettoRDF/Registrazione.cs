@@ -48,7 +48,6 @@ namespace ProgettoRDF
             string cognomeIn = textCognome.Text;
             string userIn = textUser.Text;
             int i = 0;
-            con.cn.Open();
 
             if (rbOrganizzatore.Checked==true)
             {
@@ -82,7 +81,6 @@ namespace ProgettoRDF
 
                     }finally
                     {
-
                         con.cn.Close();
                     }
                 }

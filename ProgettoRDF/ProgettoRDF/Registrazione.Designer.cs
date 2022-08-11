@@ -260,7 +260,7 @@ namespace ProgettoRDF
             this.btnRegistrazione.UseVisualStyleBackColor = false;
             this.btnRegistrazione.Click += new System.EventHandler(this.btnRegistrazione_Click);
             // 
-            // RegistrazioneUtenti
+            // Registrazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,7 +285,7 @@ namespace ProgettoRDF
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbUser);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "RegistrazioneUtenti";
+            this.Name = "Registrazione";
             this.Load += new System.EventHandler(this.RegistrazioneUtenti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);

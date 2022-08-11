@@ -44,7 +44,6 @@ C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\bin\Debug\ProgettoRDF.pdb
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csprojAssemblyReference.cache
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Login.resources
-C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuForm.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Profilo.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Properties.Resources.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csproj.GenerateResource.cache
@@ -55,3 +54,4 @@ C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.RegistrazioneCEO.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.RegistrazioneUtenti.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Registrazione.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuUtenti.resources
