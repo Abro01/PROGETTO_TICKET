@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F1272632-7944-43BD-899A-C1E55EBD2E30}</ProjectGuid>
+    <ProjectGuid>{24ED17C9-861B-4131-978D-BDDCD466274F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProgettoRDF</RootNamespace>
-    <AssemblyName>ProgettoRDF</AssemblyName>
+    <RootNamespace>DesignerProject</RootNamespace>
+    <AssemblyName>DesignerProject</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\..\Windows\SysWOW64\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,54 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Elementi\RJButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginInfo.cs" />
-    <Compile Include="MenuCEO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuCEO.Designer.cs">
-      <DependentUpon>MenuCEO.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuUtenti.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuUtenti.Designer.cs">
-      <DependentUpon>MenuUtenti.cs</DependentUpon>
-    </Compile>
-    <Compile Include="myDBconnection.cs" />
-    <Compile Include="Profilo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profilo.Designer.cs">
-      <DependentUpon>Profilo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Registrazione.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registrazione.Designer.cs">
-      <DependentUpon>Registrazione.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Utente.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCEO.resx">
-      <DependentUpon>MenuCEO.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuUtenti.resx">
-      <DependentUpon>MenuUtenti.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Profilo.resx">
-      <DependentUpon>Profilo.cs</DependentUpon>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,9 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registrazione.resx">
-      <DependentUpon>Registrazione.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

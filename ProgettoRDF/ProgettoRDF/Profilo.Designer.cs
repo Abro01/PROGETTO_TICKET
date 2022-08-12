@@ -160,7 +160,7 @@
             // btnHome
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(2, 17);
+            this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(51, 49);
             this.btnHome.TabIndex = 11;
@@ -170,7 +170,7 @@
             // btnProfilo
             // 
             this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
-            this.btnProfilo.Location = new System.Drawing.Point(58, 17);
+            this.btnProfilo.Location = new System.Drawing.Point(60, 3);
             this.btnProfilo.Name = "btnProfilo";
             this.btnProfilo.Size = new System.Drawing.Size(51, 49);
             this.btnProfilo.TabIndex = 12;

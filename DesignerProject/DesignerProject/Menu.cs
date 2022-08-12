@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProgettoRDF
+namespace DesignerProject
 {
-    public partial class MenuCEO : Form
+    public partial class Menu : Form
     {
-        public MenuCEO()
+        public Menu()
         {
             InitializeComponent();
         }
-
     }
 }
