@@ -35,6 +35,7 @@
             this.dtRisultati = new System.Windows.Forms.DataGridView();
             this.txtNomeEvento = new System.Windows.Forms.TextBox();
             this.lblNomeEvento = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnCerca = new ProgettoRDF.Elementi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -45,9 +46,10 @@
             // btnProfilo
             // 
             this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
-            this.btnProfilo.Location = new System.Drawing.Point(69, 12);
+            this.btnProfilo.Location = new System.Drawing.Point(46, 8);
+            this.btnProfilo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProfilo.Name = "btnProfilo";
-            this.btnProfilo.Size = new System.Drawing.Size(50, 49);
+            this.btnProfilo.Size = new System.Drawing.Size(33, 32);
             this.btnProfilo.TabIndex = 2;
             this.btnProfilo.TabStop = false;
             this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
@@ -55,18 +57,20 @@
             // btnHome
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(12, 12);
+            this.btnHome.Location = new System.Drawing.Point(8, 8);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(51, 49);
+            this.btnHome.Size = new System.Drawing.Size(34, 32);
             this.btnHome.TabIndex = 3;
             this.btnHome.TabStop = false;
             // 
             // btnLogout
             // 
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(1224, 12);
+            this.btnLogout.Location = new System.Drawing.Point(816, 8);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(42, 49);
+            this.btnLogout.Size = new System.Drawing.Size(28, 32);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.TabStop = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -74,26 +78,28 @@
             // dtRisultati
             // 
             this.dtRisultati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtRisultati.Location = new System.Drawing.Point(290, 189);
-            this.dtRisultati.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtRisultati.Location = new System.Drawing.Point(3, 100);
             this.dtRisultati.Name = "dtRisultati";
             this.dtRisultati.RowHeadersWidth = 62;
-            this.dtRisultati.Size = new System.Drawing.Size(651, 348);
+            this.dtRisultati.Size = new System.Drawing.Size(841, 226);
             this.dtRisultati.TabIndex = 5;
+            this.dtRisultati.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRisultati_CellContentClick);
             // 
             // txtNomeEvento
             // 
-            this.txtNomeEvento.Location = new System.Drawing.Point(520, 78);
+            this.txtNomeEvento.Location = new System.Drawing.Point(347, 51);
+            this.txtNomeEvento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNomeEvento.Name = "txtNomeEvento";
-            this.txtNomeEvento.Size = new System.Drawing.Size(213, 26);
+            this.txtNomeEvento.Size = new System.Drawing.Size(143, 20);
             this.txtNomeEvento.TabIndex = 6;
             // 
             // lblNomeEvento
             // 
             this.lblNomeEvento.AutoSize = true;
-            this.lblNomeEvento.Location = new System.Drawing.Point(383, 81);
+            this.lblNomeEvento.Location = new System.Drawing.Point(255, 53);
+            this.lblNomeEvento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeEvento.Name = "lblNomeEvento";
-            this.lblNomeEvento.Size = new System.Drawing.Size(131, 24);
+            this.lblNomeEvento.Size = new System.Drawing.Size(75, 13);
             this.lblNomeEvento.TabIndex = 7;
             this.lblNomeEvento.Text = "Nome Evento:";
             // 
@@ -105,10 +111,11 @@
             this.btnCerca.FlatAppearance.BorderSize = 0;
             this.btnCerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerca.ForeColor = System.Drawing.Color.Red;
-            this.btnCerca.Location = new System.Drawing.Point(775, 69);
+            this.btnCerca.Location = new System.Drawing.Point(517, 45);
+            this.btnCerca.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerca.Name = "btnCerca";
             this.btnCerca.Radius_bordo = 40;
-            this.btnCerca.Size = new System.Drawing.Size(148, 44);
+            this.btnCerca.Size = new System.Drawing.Size(99, 29);
             this.btnCerca.Size_bordo = 2;
             this.btnCerca.TabIndex = 17;
             this.btnCerca.Text = "CERCA";
@@ -118,10 +125,10 @@
             // 
             // MenuUtenti
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1278, 645);
+            this.ClientSize = new System.Drawing.Size(852, 419);
             this.Controls.Add(this.btnCerca);
             this.Controls.Add(this.lblNomeEvento);
             this.Controls.Add(this.txtNomeEvento);
@@ -129,6 +136,7 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnProfilo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuUtenti";
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
@@ -149,5 +157,6 @@
         private System.Windows.Forms.TextBox txtNomeEvento;
         private System.Windows.Forms.Label lblNomeEvento;
         private Elementi.RJButton btnCerca;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

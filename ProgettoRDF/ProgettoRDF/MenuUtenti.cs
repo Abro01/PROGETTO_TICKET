@@ -24,6 +24,7 @@ namespace ProgettoRDF
         {
             InitializeComponent();
             con.Connect();
+
         }
 
         private void MenuForm_Load(object sender, EventArgs e)
@@ -33,13 +34,18 @@ namespace ProgettoRDF
             string query = "SELECT e.* " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione ";
-            
-            MessageBox.Show(query);
+
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);
             da.Fill(dt);
 
             dtRisultati.DataSource = dt;
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            dtRisultati.Columns.Add(btn);
+            btn.HeaderText = "Click Data";
+            btn.Text = "ACQUISTA";
+            btn.Name = "btn";
+            btn.UseColumnTextForButtonValue = true;
         }
 
         private void btnProfilo_Click(object sender, EventArgs e)
@@ -65,7 +71,6 @@ namespace ProgettoRDF
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
                            "AND e.Nome = '" + nomeEvento + "'";
-            MessageBox.Show(query);
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);
             da.Fill(dt);
@@ -76,6 +81,14 @@ namespace ProgettoRDF
         private void btnCerca_Click(object sender, EventArgs e)
         {
             ricercaEventi(txtNomeEvento.Text);
+        }
+
+
+        private void dtRisultati_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            LoginInfo.IdEvento = Int16.Parse(idEvento);
+
         }
     }
 }
