@@ -55,3 +55,5 @@ C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuCEO.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuUtenti.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Registrazione.resources
+C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuUtenti2.resources
+C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.EventiInfo.resources

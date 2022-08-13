@@ -88,7 +88,9 @@ namespace ProgettoRDF
         {
             string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
             LoginInfo.IdEvento = Int16.Parse(idEvento);
-
+            EventiInfo ei = new EventiInfo();
+            ei.Show();
+            this.Hide();
         }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="Elementi\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EventiInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventiInfo.Designer.cs">
+      <DependentUpon>EventiInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Utente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EventiInfo.resx">
+      <DependentUpon>EventiInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
