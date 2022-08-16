@@ -29,6 +29,7 @@ namespace ProgettoRDF
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventiInfo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,12 +39,18 @@ namespace ProgettoRDF
             this.cbNumBiglietti = new System.Windows.Forms.ComboBox();
             this.lLuogo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnProfilo = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 74);
+            this.label1.Location = new System.Drawing.Point(119, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 0;
@@ -70,7 +77,7 @@ namespace ProgettoRDF
             // lDescrizione
             // 
             this.lDescrizione.AutoSize = true;
-            this.lDescrizione.Location = new System.Drawing.Point(304, 74);
+            this.lDescrizione.Location = new System.Drawing.Point(316, 147);
             this.lDescrizione.Name = "lDescrizione";
             this.lDescrizione.Size = new System.Drawing.Size(0, 13);
             this.lDescrizione.TabIndex = 3;
@@ -78,7 +85,7 @@ namespace ProgettoRDF
             // lTitolo
             // 
             this.lTitolo.AutoSize = true;
-            this.lTitolo.Location = new System.Drawing.Point(95, 13);
+            this.lTitolo.Location = new System.Drawing.Point(107, 86);
             this.lTitolo.Name = "lTitolo";
             this.lTitolo.Size = new System.Drawing.Size(29, 13);
             this.lTitolo.TabIndex = 4;
@@ -104,7 +111,7 @@ namespace ProgettoRDF
             // lLuogo
             // 
             this.lLuogo.AutoSize = true;
-            this.lLuogo.Location = new System.Drawing.Point(643, 13);
+            this.lLuogo.Location = new System.Drawing.Point(655, 86);
             this.lLuogo.Name = "lLuogo";
             this.lLuogo.Size = new System.Drawing.Size(37, 13);
             this.lLuogo.TabIndex = 7;
@@ -113,17 +120,53 @@ namespace ProgettoRDF
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(601, 12);
+            this.label4.Location = new System.Drawing.Point(613, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Dove:";
             // 
+            // btnProfilo
+            // 
+            this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
+            this.btnProfilo.Location = new System.Drawing.Point(41, 11);
+            this.btnProfilo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProfilo.Name = "btnProfilo";
+            this.btnProfilo.Size = new System.Drawing.Size(34, 32);
+            this.btnProfilo.TabIndex = 24;
+            this.btnProfilo.TabStop = false;
+            this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(3, 11);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(34, 32);
+            this.btnHome.TabIndex = 23;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(761, 11);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(28, 32);
+            this.btnLogout.TabIndex = 22;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // EventiInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 450);
+            this.Controls.Add(this.btnProfilo);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lLuogo);
             this.Controls.Add(this.cbNumBiglietti);
@@ -136,6 +179,9 @@ namespace ProgettoRDF
             this.Name = "EventiInfo";
             this.Text = "\\";
             this.Load += new System.EventHandler(this.EventiInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +198,8 @@ namespace ProgettoRDF
         private System.Windows.Forms.ComboBox cbNumBiglietti;
         private System.Windows.Forms.Label lLuogo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox btnProfilo;
+        private System.Windows.Forms.PictureBox btnHome;
+        private System.Windows.Forms.PictureBox btnLogout;
     }
 }

@@ -51,5 +51,28 @@ namespace ProgettoRDF
             lTitolo.Text = dt.Rows[0]["Nome"].ToString();
             lLuogo.Text = dt.Rows[0]["Luogo"].ToString();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login logout = new Login();
+            logout.Show();
+            this.Close();
+            con.cn.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            MenuUtenti home = new MenuUtenti();
+            home.ShowDialog();
+            this.Hide();
+            con.cn.Close();
+        }
+
+        private void btnProfilo_Click(object sender, EventArgs e)
+        {
+            Profilo profilo = new Profilo();
+            profilo.Show();
+            this.Hide();
+        }
     }
 }
