@@ -26,6 +26,7 @@ namespace ProgettoRDF
         private void RegistrazioneUtenti_Load(object sender, EventArgs e)
         {
             con.cn.Open();
+            this.cbOrg.DropDownStyle = ComboBoxStyle.DropDownList; //Non permette di scrivere nella combobox facendola diventare di fatto una ddlist
             int i = 0;
             string queryOrganizzazioni = "SELECT nome " +
                                          "FROM organizzazione";

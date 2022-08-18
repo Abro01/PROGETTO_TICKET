@@ -14,8 +14,8 @@ namespace ProgettoRDF
     public partial class Login : Form
     {
         myDBconnection con = new myDBconnection();
-        MySqlCommand command;
-        DataTable dt=new DataTable();
+        DataTable dt = new DataTable();
+        DataTable id = new DataTable();
         DataTable dataTable = new DataTable();
 
         public static string emailIN, passwordIN;
@@ -53,7 +53,10 @@ namespace ProgettoRDF
                     {
                         emailIN = textEmail.Text;
                         passwordIN = textPassword.Text;
-                        LoginInfo.UserID = textEmail.Text;
+                        string qId = "SELECT ID from utenti WHERE Email =" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
+                        MySqlDataAdapter da1 = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
+                        da1.Fill(id);
+                        LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());
                         MenuCEO home = new MenuCEO();
                         home.ShowDialog();
                         this.Hide();
@@ -69,7 +72,10 @@ namespace ProgettoRDF
                 {
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
-                    LoginInfo.UserID = textEmail.Text;
+                    string qId = "SELECT ID from utenti WHERE Email =" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
+                    MySqlDataAdapter da = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
+                    da.Fill(id);
+                    LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());
                     MenuUtenti home = new MenuUtenti();
                     home.ShowDialog();
                     this.Hide();

@@ -8,7 +8,7 @@ namespace ProgettoRDF
 {
     public static class LoginInfo
     {   
-        public static string UserID;
+        public static int UserID;
         public static int IdEvento;
     }
 }

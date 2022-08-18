@@ -16,8 +16,8 @@ namespace ProgettoRDF
 
         myDBconnection con = new myDBconnection();
         DataTable dt = new DataTable();
-        MySqlDataAdapter da;
-
+        DataTable costo = new DataTable();
+        int prezzo;
         public EventiInfo()
         {
             InitializeComponent();
@@ -27,15 +27,16 @@ namespace ProgettoRDF
         private void EventiInfo_Load(object sender, EventArgs e)
         {
             con.cn.Open();
-            for (int y = 1; y < 5; y++)
-            {
-                cbNumBiglietti.Items.Add(y);
-            }
+            this.cbNumBiglietti.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbNumBiglietti.SelectedIndex = 0;
             try
             {
                 string query = "SELECT * FROM eventi WHERE id = '" + LoginInfo.IdEvento + "'";
+                string qBiglietto = "SELECT costo FROM biglietti WHERE id = '" + LoginInfo.IdEvento + "'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+                MySqlDataAdapter da = new MySqlDataAdapter(qBiglietto, con.cn);
+                da.Fill(costo);
                 sda.Fill(dt);
             }
             catch (Exception ex)
@@ -50,6 +51,8 @@ namespace ProgettoRDF
             lDescrizione.Text = dt.Rows[0]["Descrizione"].ToString();
             lTitolo.Text = dt.Rows[0]["Nome"].ToString();
             lLuogo.Text = dt.Rows[0]["Luogo"].ToString();
+            prezzo = Int32.Parse(costo.Rows[0]["costo"].ToString());
+            lPrezzo.Text = prezzo.ToString();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -73,6 +76,18 @@ namespace ProgettoRDF
             Profilo profilo = new Profilo();
             profilo.Show();
             this.Hide();
+        }
+
+        private void cbNumBiglietti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lPrezzo.Text = (((cbNumBiglietti.SelectedIndex) + 1) * prezzo).ToString(); //Cambia il prezzo in base a quanti biglietti si desiderano
+        }
+
+        private void btnAcquista_Click(object sender, EventArgs e)
+        {
+            string query = $"INSERT INTO utenti_biglietti";
+            MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+            
         }
     }
 }

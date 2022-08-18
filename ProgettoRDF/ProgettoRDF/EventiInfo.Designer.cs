@@ -42,6 +42,7 @@ namespace ProgettoRDF
             this.btnProfilo = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnAcquista = new ProgettoRDF.Elementi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
@@ -103,10 +104,16 @@ namespace ProgettoRDF
             // cbNumBiglietti
             // 
             this.cbNumBiglietti.FormattingEnabled = true;
+            this.cbNumBiglietti.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
             this.cbNumBiglietti.Location = new System.Drawing.Point(374, 338);
             this.cbNumBiglietti.Name = "cbNumBiglietti";
             this.cbNumBiglietti.Size = new System.Drawing.Size(121, 21);
             this.cbNumBiglietti.TabIndex = 6;
+            this.cbNumBiglietti.SelectedIndexChanged += new System.EventHandler(this.cbNumBiglietti_SelectedIndexChanged);
             // 
             // lLuogo
             // 
@@ -159,11 +166,32 @@ namespace ProgettoRDF
             this.btnLogout.TabStop = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnAcquista
+            // 
+            this.btnAcquista.BackColor = System.Drawing.Color.White;
+            this.btnAcquista.BackgroundColor = System.Drawing.Color.White;
+            this.btnAcquista.Colore_bordo = System.Drawing.Color.Red;
+            this.btnAcquista.FlatAppearance.BorderSize = 0;
+            this.btnAcquista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcquista.ForeColor = System.Drawing.Color.Red;
+            this.btnAcquista.Location = new System.Drawing.Point(601, 413);
+            this.btnAcquista.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAcquista.Name = "btnAcquista";
+            this.btnAcquista.Radius_bordo = 40;
+            this.btnAcquista.Size = new System.Drawing.Size(111, 39);
+            this.btnAcquista.Size_bordo = 2;
+            this.btnAcquista.TabIndex = 25;
+            this.btnAcquista.Text = "ACQUISTA";
+            this.btnAcquista.TextColor = System.Drawing.Color.Red;
+            this.btnAcquista.UseVisualStyleBackColor = false;
+            this.btnAcquista.Click += new System.EventHandler(this.btnAcquista_Click);
+            // 
             // EventiInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 450);
+            this.ClientSize = new System.Drawing.Size(795, 502);
+            this.Controls.Add(this.btnAcquista);
             this.Controls.Add(this.btnProfilo);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnLogout);
@@ -201,5 +229,6 @@ namespace ProgettoRDF
         private System.Windows.Forms.PictureBox btnProfilo;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.PictureBox btnLogout;
+        private Elementi.RJButton btnAcquista;
     }
 }
