@@ -53,7 +53,7 @@ namespace ProgettoRDF
                     {
                         emailIN = textEmail.Text;
                         passwordIN = textPassword.Text;
-                        string qId = "SELECT ID from utenti WHERE Email =" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
+                        string qId = "SELECT ID from utenti WHERE Email = '" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
                         MySqlDataAdapter da1 = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
                         da1.Fill(id);
                         LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());
@@ -72,7 +72,7 @@ namespace ProgettoRDF
                 {
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
-                    string qId = "SELECT ID from utenti WHERE Email =" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
+                    string qId = "SELECT ID from utenti WHERE Email = '" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
                     MySqlDataAdapter da = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
                     da.Fill(id);
                     LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());

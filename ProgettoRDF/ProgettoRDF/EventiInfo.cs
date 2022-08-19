@@ -43,10 +43,7 @@ namespace ProgettoRDF
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
-                con.cn.Close();
-            }
+            
 
             lDescrizione.Text = dt.Rows[0]["Descrizione"].ToString();
             lTitolo.Text = dt.Rows[0]["Nome"].ToString();
@@ -85,9 +82,11 @@ namespace ProgettoRDF
 
         private void btnAcquista_Click(object sender, EventArgs e)
         {
-            string query = $"INSERT INTO utenti_biglietti";
-            MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
-            
+            string query = $"INSERT INTO 'utenti_biglietti` (`ID`, `CODUtente`, `CODBiglietto`) VALUES ('', '" + LoginInfo.UserID + "', '" + LoginInfo.IdEvento +"');";
+            MessageBox.Show(query);
+            MySqlCommand command = new MySqlCommand(query, con.cn);
+            command.ExecuteNonQuery();
+            con.cn.Close();
         }
     }
 }

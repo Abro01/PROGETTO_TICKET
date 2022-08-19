@@ -27,7 +27,7 @@ namespace ProgettoRDF
             con.cn.Open();
             try
             {
-                string query = "SELECT * FROM utenti WHERE email = '" + LoginInfo.UserID + "'";
+                string query = "SELECT * FROM utenti WHERE ID = '" + LoginInfo.UserID + "'";
                
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
                 sda.Fill(dt);
