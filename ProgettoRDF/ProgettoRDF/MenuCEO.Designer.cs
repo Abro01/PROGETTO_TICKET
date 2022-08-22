@@ -36,6 +36,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bProfilo = new System.Windows.Forms.PictureBox();
             this.bHome = new System.Windows.Forms.PictureBox();
+            this.dtEventi = new System.Windows.Forms.DataGridView();
+            this.l1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -43,6 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bProfilo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtEventi)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -118,11 +121,31 @@
             this.bHome.TabStop = false;
             this.bHome.Click += new System.EventHandler(this.bHome_Click);
             // 
+            // dtEventi
+            // 
+            this.dtEventi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtEventi.Location = new System.Drawing.Point(79, 166);
+            this.dtEventi.Name = "dtEventi";
+            this.dtEventi.Size = new System.Drawing.Size(592, 182);
+            this.dtEventi.TabIndex = 27;
+            // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Location = new System.Drawing.Point(76, 50);
+            this.l1.Name = "l1";
+            this.l1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.l1.Size = new System.Drawing.Size(255, 13);
+            this.l1.TabIndex = 28;
+            this.l1.Text = "Eventi organizzati dall\'organizzazione di questo CEO:";
+            // 
             // MenuCEO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 482);
+            this.Controls.Add(this.l1);
+            this.Controls.Add(this.dtEventi);
             this.Controls.Add(this.bProfilo);
             this.Controls.Add(this.bHome);
             this.Controls.Add(this.pictureBox2);
@@ -133,6 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuCEO";
             this.Text = "MenuCEO";
+            this.Load += new System.EventHandler(this.MenuCEO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -140,7 +164,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bProfilo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtEventi)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,5 +179,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox bProfilo;
         private System.Windows.Forms.PictureBox bHome;
+        private System.Windows.Forms.DataGridView dtEventi;
+        private System.Windows.Forms.Label l1;
     }
 }
