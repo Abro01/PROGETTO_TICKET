@@ -50,7 +50,7 @@ namespace ProgettoRDF
             string query = "SELECT e.* " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
-                           "AND e.CODOrganizzazione= '" +LoginInfo.UserID + "'";
+                           "AND c.ID = '" + LoginInfo.UserID + "'";
 
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);

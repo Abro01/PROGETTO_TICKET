@@ -42,7 +42,7 @@ namespace ProgettoRDF
             {
                 con.cn.Open();
 
-                if(cbCEOlogin.Checked)
+                if (cbCEOlogin.Checked)
                 {
                     string queryCEO = "SELECT * FROM ceo_organizzazioni WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
                     MySqlDataAdapter da = new MySqlDataAdapter(queryCEO, con.cn);
@@ -61,40 +61,53 @@ namespace ProgettoRDF
                         home.ShowDialog();
                         this.Hide();
                     }
+                    else
+                    {
+                        MessageBox.Show("Dati inseriti errati", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textEmail.Clear();
+                        textPassword.Clear();
+                        textEmail.Focus();
+                    }
                 }
-
-                string queryUtenti = "SELECT * FROM utenti WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
-                MySqlDataAdapter sda = new MySqlDataAdapter(queryUtenti, con.cn);
-
-                sda.Fill(dt);
-
-                if (dt.Rows.Count > 0)
+                else
                 {
-                    emailIN = textEmail.Text;
-                    passwordIN = textPassword.Text;
-                    string qId = "SELECT ID from utenti WHERE Email = '" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
-                    MySqlDataAdapter da = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
-                    da.Fill(id);
-                    LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());
-                    MenuUtenti home = new MenuUtenti();
-                    home.ShowDialog();
-                    this.Hide();
-                }else
-                {
-                    MessageBox.Show("Dati inseriti errati", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textEmail.Clear();
-                    textPassword.Clear();
 
-                    textEmail.Focus();
+
+                    string queryUtenti = "SELECT * FROM utenti WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
+                    MySqlDataAdapter sda = new MySqlDataAdapter(queryUtenti, con.cn);
+
+                    sda.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        emailIN = textEmail.Text;
+                        passwordIN = textPassword.Text;
+                        string qId = "SELECT ID from utenti WHERE Email = '" + textEmail.Text + "'";//QUERY PER TROVARE L'ID DELL'UTENTE
+                        MySqlDataAdapter da = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
+                        da.Fill(id);
+                        LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());
+                        MenuUtenti home = new MenuUtenti();
+                        home.ShowDialog();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dati inseriti errati", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textEmail.Clear();
+                        textPassword.Clear();
+                        textEmail.Focus();
+                    }
                 }
-
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
+            
             con.cn.Close();
+            
         }
+
         //Cancella i caratteri nelle textbox per permettere di effettuare un nuovo accesso
         private void btnClear_Click(object sender, EventArgs e)
         {

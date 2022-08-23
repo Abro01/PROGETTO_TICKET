@@ -51,7 +51,7 @@
             // btnLogout
             // 
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(728, 2);
+            this.btnLogout.Location = new System.Drawing.Point(923, 2);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(28, 32);
@@ -124,9 +124,9 @@
             // dtEventi
             // 
             this.dtEventi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtEventi.Location = new System.Drawing.Point(79, 166);
+            this.dtEventi.Location = new System.Drawing.Point(37, 163);
             this.dtEventi.Name = "dtEventi";
-            this.dtEventi.Size = new System.Drawing.Size(592, 182);
+            this.dtEventi.Size = new System.Drawing.Size(881, 182);
             this.dtEventi.TabIndex = 27;
             // 
             // l1
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 482);
+            this.ClientSize = new System.Drawing.Size(953, 482);
             this.Controls.Add(this.l1);
             this.Controls.Add(this.dtEventi);
             this.Controls.Add(this.bProfilo);
