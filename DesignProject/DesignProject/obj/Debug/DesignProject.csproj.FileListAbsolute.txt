@@ -1,0 +1,9 @@
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\bin\Debug\DesignProject.exe.config
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\bin\Debug\DesignProject.exe
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\bin\Debug\DesignProject.pdb
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.csprojAssemblyReference.cache
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.FormMainMenu.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.Properties.Resources.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.csproj.GenerateResource.cache
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.exe
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.pdb
