@@ -45,16 +45,18 @@
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(424, 12);
+            this.textEmail.Location = new System.Drawing.Point(636, 18);
+            this.textEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(161, 20);
+            this.textEmail.Size = new System.Drawing.Size(240, 26);
             this.textEmail.TabIndex = 1;
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(424, 43);
+            this.textPassword.Location = new System.Drawing.Point(636, 66);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(161, 20);
+            this.textPassword.Size = new System.Drawing.Size(240, 26);
             this.textPassword.TabIndex = 2;
             this.textPassword.UseSystemPasswordChar = true;
             this.textPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textPassword_KeyUp);
@@ -64,9 +66,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(318, 9);
+            this.label1.Location = new System.Drawing.Point(477, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(82, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "EMAIL";
             // 
@@ -76,9 +79,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(301, 43);
+            this.label2.Location = new System.Drawing.Point(452, 66);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 18);
+            this.label2.Size = new System.Drawing.Size(140, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "PASSWORD";
             // 
@@ -86,10 +90,9 @@
             // 
             this.lnkRegistrazione.AutoSize = true;
             this.lnkRegistrazione.LinkColor = System.Drawing.Color.Black;
-            this.lnkRegistrazione.Location = new System.Drawing.Point(432, 139);
-            this.lnkRegistrazione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkRegistrazione.Location = new System.Drawing.Point(648, 214);
             this.lnkRegistrazione.Name = "lnkRegistrazione";
-            this.lnkRegistrazione.Size = new System.Drawing.Size(51, 13);
+            this.lnkRegistrazione.Size = new System.Drawing.Size(77, 20);
             this.lnkRegistrazione.TabIndex = 12;
             this.lnkRegistrazione.TabStop = true;
             this.lnkRegistrazione.Text = "Registrati";
@@ -98,20 +101,18 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(207, 218);
-            this.Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Logo.Location = new System.Drawing.Point(310, 335);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(519, 295);
+            this.Logo.Size = new System.Drawing.Size(778, 454);
             this.Logo.TabIndex = 13;
             this.Logo.TabStop = false;
             // 
             // cbCEOlogin
             // 
             this.cbCEOlogin.AutoSize = true;
-            this.cbCEOlogin.Location = new System.Drawing.Point(424, 68);
-            this.cbCEOlogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCEOlogin.Location = new System.Drawing.Point(636, 105);
             this.cbCEOlogin.Name = "cbCEOlogin";
-            this.cbCEOlogin.Size = new System.Drawing.Size(73, 17);
+            this.cbCEOlogin.Size = new System.Drawing.Size(106, 24);
             this.cbCEOlogin.TabIndex = 17;
             this.cbCEOlogin.Text = "CEO login";
             this.cbCEOlogin.UseVisualStyleBackColor = true;
@@ -124,11 +125,10 @@
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.Red;
-            this.btnClear.Location = new System.Drawing.Point(515, 98);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(772, 151);
             this.btnClear.Name = "btnClear";
             this.btnClear.Radius_bordo = 40;
-            this.btnClear.Size = new System.Drawing.Size(111, 39);
+            this.btnClear.Size = new System.Drawing.Size(166, 60);
             this.btnClear.Size_bordo = 2;
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "CLEAR";
@@ -144,11 +144,10 @@
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.Red;
-            this.btnLogin.Location = new System.Drawing.Point(400, 98);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(600, 151);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Radius_bordo = 40;
-            this.btnLogin.Size = new System.Drawing.Size(111, 39);
+            this.btnLogin.Size = new System.Drawing.Size(166, 60);
             this.btnLogin.Size_bordo = 2;
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "LOGIN";
@@ -164,11 +163,10 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(285, 98);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(428, 151);
             this.btnExit.Name = "btnExit";
             this.btnExit.Radius_bordo = 40;
-            this.btnExit.Size = new System.Drawing.Size(111, 39);
+            this.btnExit.Size = new System.Drawing.Size(166, 60);
             this.btnExit.Size_bordo = 2;
             this.btnExit.TabIndex = 14;
             this.btnExit.Text = "EXIT";
@@ -178,10 +176,10 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2628, 701);
+            this.ClientSize = new System.Drawing.Size(1478, 744);
             this.Controls.Add(this.cbCEOlogin);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnLogin);
@@ -192,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textEmail);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();

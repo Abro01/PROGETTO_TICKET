@@ -57,3 +57,8 @@ C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Registrazione.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuUtenti2.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.EventiInfo.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.EventiInfo.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.FormInterfacciaUtente.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.FormHomeUtente.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormRicercaUtente.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuCEO.resources

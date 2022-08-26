@@ -58,6 +58,24 @@
     <Compile Include="EventiInfo.Designer.cs">
       <DependentUpon>EventiInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInterfacciaUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInterfacciaUtente.Designer.cs">
+      <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utente\FormHomeUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utente\FormHomeUtente.Designer.cs">
+      <DependentUpon>FormHomeUtente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utente\FormRicercaUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utente\FormRicercaUtente.Designer.cs">
+      <DependentUpon>FormRicercaUtente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +94,6 @@
     </Compile>
     <Compile Include="MenuUtenti.Designer.cs">
       <DependentUpon>MenuUtenti.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuUtenti2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuUtenti2.Designer.cs">
-      <DependentUpon>MenuUtenti2.cs</DependentUpon>
     </Compile>
     <Compile Include="myDBconnection.cs" />
     <Compile Include="Profilo.cs">
@@ -102,6 +114,15 @@
     <EmbeddedResource Include="EventiInfo.resx">
       <DependentUpon>EventiInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInterfacciaUtente.resx">
+      <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utente\FormHomeUtente.resx">
+      <DependentUpon>FormHomeUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utente\FormRicercaUtente.resx">
+      <DependentUpon>FormRicercaUtente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtenti.resx">
       <DependentUpon>MenuUtenti.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuUtenti2.resx">
-      <DependentUpon>MenuUtenti2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profilo.resx">
       <DependentUpon>Profilo.cs</DependentUpon>
@@ -142,5 +160,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

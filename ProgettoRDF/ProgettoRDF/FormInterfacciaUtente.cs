@@ -1,4 +1,4 @@
-﻿using DesignProject.Classi;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,18 +10,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DesignProject
+namespace ProgettoRDF
 {
-    public partial class FormMainMenu : Form
+    public partial class FormInterfacciaUtente : Form
     {
+        myDBconnection con = new myDBconnection();
+        MySqlCommand command;
+        MySqlDataAdapter da;
+        DataTable dt = new DataTable();
+        string id;
+
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
 
-        public FormMainMenu()
+        public FormInterfacciaUtente()
         {
             InitializeComponent();
+            con.Connect();
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
@@ -38,7 +45,7 @@ namespace DesignProject
         {
             int index = random.Next(ThemeColor.ColorList.Count);
 
-            while(tempIndex == index)
+            while (tempIndex == index)
             {
                 index = random.Next(ThemeColor.ColorList.Count);
             }
@@ -51,9 +58,9 @@ namespace DesignProject
 
         private void ActivateButton(object btnSender)
         {
-            if(btnSender != null)
+            if (btnSender != null)
             {
-                if(currentButton != (Button)btnSender)
+                if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
                     Color color = SelectThemeColor();
@@ -72,9 +79,9 @@ namespace DesignProject
 
         private void DisableButton()
         {
-            foreach(Control previousBtn in pnlMenu.Controls)
+            foreach (Control previousBtn in pnlMenu.Controls)
             {
-                if(previousBtn.GetType() == typeof(Button))
+                if (previousBtn.GetType() == typeof(Button))
                 {
                     previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                     previousBtn.ForeColor = Color.White;
@@ -85,7 +92,7 @@ namespace DesignProject
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -104,12 +111,12 @@ namespace DesignProject
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormHome(), sender);
+            OpenChildForm(new Forms.FormHomeUtente(), sender);
         }
 
         private void btnCerca_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Utente.FormRicercaUtente(), sender);
         }
 
         private void btnCarrello_Click(object sender, EventArgs e)
@@ -129,17 +136,15 @@ namespace DesignProject
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-        }
-
-        private void FormMainMenu_Load(object sender, EventArgs e)
-        {
-            //OpenChildForm(new Forms.FormHome(), sender);
+            Login logout = new Login();
+            logout.Show();
+            this.Hide();
+            con.cn.Close();
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -151,7 +156,7 @@ namespace DesignProject
             DisableButton();
             lblTitolo.Text = "HOME";
             pnlTitolo.BackColor = Color.FromArgb(0, 150, 136);
-            pnlLogo.BackColor=Color.FromArgb(39, 39, 58);
+            pnlLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
@@ -172,15 +177,21 @@ namespace DesignProject
             if (WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
-            }else
+            }
+            else
             {
                 this.WindowState = FormWindowState.Normal;
-            }    
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FormInterfacciaUtente_Load(object sender, EventArgs e)
+        {
+            con.cn.Open();
         }
     }
 }

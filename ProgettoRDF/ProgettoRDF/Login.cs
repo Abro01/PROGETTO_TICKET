@@ -86,7 +86,7 @@ namespace ProgettoRDF
                         MySqlDataAdapter da = new MySqlDataAdapter(qId, con.cn);                  //CON LE VARIABILI DI SQL UTILI PER CIO'
                         da.Fill(id);
                         LoginInfo.UserID = Int32.Parse(id.Rows[0]["ID"].ToString());
-                        MenuUtenti home = new MenuUtenti();
+                        FormInterfacciaUtente home = new FormInterfacciaUtente();
                         home.ShowDialog();
                         this.Hide();
                     }

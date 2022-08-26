@@ -1,16 +1,16 @@
-﻿namespace DesignProject
+﻿namespace ProgettoRDF
 {
-    partial class FormMainMenu
+    partial class FormInterfacciaUtente
     {
         /// <summary>
-        /// Variabile di progettazione necessaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Pulire le risorse in uso.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,15 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Codice generato da Progettazione Windows Form
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Metodo necessario per il supporto della finestra di progettazione. Non modificare
-        /// il contenuto del metodo con l'editor di codice.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInterfacciaUtente));
+            this.pnlDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnImpostazioni = new System.Windows.Forms.Button();
@@ -37,21 +39,40 @@
             this.btnCerca = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.pnlTitolo = new System.Windows.Forms.Panel();
-            this.lblTitolo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlDesktop = new System.Windows.Forms.Panel();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
+            this.pnlTitolo = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.lblTitolo = new System.Windows.Forms.Label();
+            this.pnlDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.pnlTitolo.SuspendLayout();
-            this.pnlDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pnlDesktop
+            // 
+            this.pnlDesktop.Controls.Add(this.pnlTitolo);
+            this.pnlDesktop.Controls.Add(this.pictureBox1);
+            this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDesktop.Location = new System.Drawing.Point(220, 0);
+            this.pnlDesktop.Name = "pnlDesktop";
+            this.pnlDesktop.Size = new System.Drawing.Size(1258, 744);
+            this.pnlDesktop.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(241, 134);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(531, 322);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlMenu
             // 
@@ -67,7 +88,7 @@
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(220, 744);
-            this.pnlMenu.TabIndex = 0;
+            this.pnlMenu.TabIndex = 3;
             // 
             // btnLogout
             // 
@@ -199,33 +220,6 @@
             this.pnlLogo.Size = new System.Drawing.Size(220, 80);
             this.pnlLogo.TabIndex = 0;
             // 
-            // pnlTitolo
-            // 
-            this.pnlTitolo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.pnlTitolo.Controls.Add(this.btnMinimize);
-            this.pnlTitolo.Controls.Add(this.btnMaximize);
-            this.pnlTitolo.Controls.Add(this.btnClose);
-            this.pnlTitolo.Controls.Add(this.btnCloseChildForm);
-            this.pnlTitolo.Controls.Add(this.lblTitolo);
-            this.pnlTitolo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitolo.Location = new System.Drawing.Point(220, 0);
-            this.pnlTitolo.Name = "pnlTitolo";
-            this.pnlTitolo.Size = new System.Drawing.Size(1258, 80);
-            this.pnlTitolo.TabIndex = 1;
-            this.pnlTitolo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitolo_MouseDown);
-            // 
-            // lblTitolo
-            // 
-            this.lblTitolo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitolo.AutoSize = true;
-            this.lblTitolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitolo.ForeColor = System.Drawing.Color.White;
-            this.lblTitolo.Location = new System.Drawing.Point(579, 19);
-            this.lblTitolo.Name = "lblTitolo";
-            this.lblTitolo.Size = new System.Drawing.Size(116, 37);
-            this.lblTitolo.TabIndex = 0;
-            this.lblTitolo.Text = "HOME";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -237,68 +231,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "AP";
             // 
-            // pnlDesktop
+            // pnlTitolo
             // 
-            this.pnlDesktop.Controls.Add(this.pictureBox1);
-            this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDesktop.Location = new System.Drawing.Point(220, 80);
-            this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(1258, 664);
-            this.pnlDesktop.TabIndex = 2;
-            // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
-            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
-            this.btnCloseChildForm.TabIndex = 1;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(241, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(531, 322);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1216, -11);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 44);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "o";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Location = new System.Drawing.Point(1177, -11);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(42, 44);
-            this.btnMaximize.TabIndex = 3;
-            this.btnMaximize.Text = "o";
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.pnlTitolo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pnlTitolo.Controls.Add(this.btnMinimize);
+            this.pnlTitolo.Controls.Add(this.btnMaximize);
+            this.pnlTitolo.Controls.Add(this.btnClose);
+            this.pnlTitolo.Controls.Add(this.btnCloseChildForm);
+            this.pnlTitolo.Controls.Add(this.lblTitolo);
+            this.pnlTitolo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitolo.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitolo.Name = "pnlTitolo";
+            this.pnlTitolo.Size = new System.Drawing.Size(1258, 80);
+            this.pnlTitolo.TabIndex = 2;
+            this.pnlTitolo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitolo_MouseDown);
             // 
             // btnMinimize
             // 
@@ -315,32 +261,94 @@
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // FormMainMenu
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.Location = new System.Drawing.Point(1177, -11);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(42, 44);
+            this.btnMaximize.TabIndex = 3;
+            this.btnMaximize.Text = "o";
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(1216, -11);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(42, 44);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "o";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
+            this.btnCloseChildForm.TabIndex = 1;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
+            // 
+            // lblTitolo
+            // 
+            this.lblTitolo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitolo.AutoSize = true;
+            this.lblTitolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitolo.ForeColor = System.Drawing.Color.White;
+            this.lblTitolo.Location = new System.Drawing.Point(579, 19);
+            this.lblTitolo.Name = "lblTitolo";
+            this.lblTitolo.Size = new System.Drawing.Size(116, 37);
+            this.lblTitolo.TabIndex = 0;
+            this.lblTitolo.Text = "HOME";
+            // 
+            // FormInterfacciaUtente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1478, 744);
             this.Controls.Add(this.pnlDesktop);
-            this.Controls.Add(this.pnlTitolo);
             this.Controls.Add(this.pnlMenu);
-            this.Name = "FormMainMenu";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormMainMenu_Load);
+            this.Name = "FormInterfacciaUtente";
+            this.Text = "FormInterfacciaUtente";
+            this.Load += new System.EventHandler(this.FormInterfacciaUtente_Load);
+            this.pnlDesktop.ResumeLayout(false);
+            this.pnlDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
             this.pnlTitolo.ResumeLayout(false);
             this.pnlTitolo.PerformLayout();
-            this.pnlDesktop.ResumeLayout(false);
-            this.pnlDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel pnlDesktop;
+        private System.Windows.Forms.Panel pnlTitolo;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximize;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.Label lblTitolo;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnImpostazioni;
@@ -349,15 +357,6 @@
         private System.Windows.Forms.Button btnCerca;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Panel pnlTitolo;
-        private System.Windows.Forms.Label lblTitolo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlDesktop;
-        private System.Windows.Forms.Button btnCloseChildForm;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button btnMaximize;
     }
 }
-

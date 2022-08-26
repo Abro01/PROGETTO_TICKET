@@ -7,3 +7,4 @@ C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignPro
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.csproj.GenerateResource.cache
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.exe
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.pdb
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\DesignProject\DesignProject\obj\Debug\DesignProject.Forms.FormHome.resources

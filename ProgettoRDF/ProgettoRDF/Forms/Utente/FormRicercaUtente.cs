@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,28 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
-namespace ProgettoRDF
+namespace ProgettoRDF.Forms.Utente
 {
-    public partial class MenuUtenti : Form
+    public partial class FormRicercaUtente : Form
     {
-
         myDBconnection con = new myDBconnection();
         MySqlCommand command;
         MySqlDataAdapter da;
         DataTable dt = new DataTable();
         string id;
 
-        public MenuUtenti()
+        public FormRicercaUtente()
         {
             InitializeComponent();
             con.Connect();
         }
 
-        private void MenuForm_Load(object sender, EventArgs e)
+        private void FormRicercaUtente_Load(object sender, EventArgs e)
         {
-            con.cn.Open();
+            LoadTheme();
 
             string query = "SELECT e.* " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
@@ -47,19 +46,23 @@ namespace ProgettoRDF
             btn.UseColumnTextForButtonValue = true;
         }
 
-        private void btnProfilo_Click(object sender, EventArgs e)
+        private void LoadTheme()
         {
-            Profilo profilo = new Profilo();
-            profilo.Show();
-            this.Hide();
-        }
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            Login logout = new Login();
-            logout.Show();
-            this.Hide();
-            con.cn.Close();
+            lblNomeEvento.ForeColor = ThemeColor.SecondaryColor;
+            btnCerca.ForeColor = ThemeColor.PrimaryColor;
+            btnCerca.Colore_bordo = ThemeColor.PrimaryColor;
+            btnCerca.TextColor = ThemeColor.PrimaryColor;
         }
 
         public void ricercaEventi(string nomeEvento)
@@ -81,7 +84,6 @@ namespace ProgettoRDF
         {
             ricercaEventi(txtNomeEvento.Text);
         }
-
 
         private void dtRisultati_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
