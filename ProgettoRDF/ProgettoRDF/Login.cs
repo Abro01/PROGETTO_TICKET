@@ -1,13 +1,14 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace ProgettoRDF
 {
@@ -24,17 +25,69 @@ namespace ProgettoRDF
         {
             InitializeComponent();
             con.Connect();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        //Cancella i caratteri nelle textbox per permettere di effettuare un nuovo accesso
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            DialogResult res;
-            res = MessageBox.Show("Vuoi uscire?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            textEmail.Clear();
+            textPassword.Clear();
+
+            textEmail.Focus();
+        }
+
+        private void textPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
             {
-                Application.Exit();
+                btnLogin.PerformClick();
+            }     
+        }
+
+        private void lnkRegistrazione_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registrazione reg = new Registrazione();
+            reg.Show();
+            this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
             }
         }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pnlTitolo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        //Permette il login con l'invio 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -103,31 +156,8 @@ namespace ProgettoRDF
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
             con.cn.Close();
-            
-        }
-
-        //Cancella i caratteri nelle textbox per permettere di effettuare un nuovo accesso
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            textEmail.Clear();
-            textPassword.Clear();
-
-            textEmail.Focus();
-        }
-        //Permette il login con l'invio 
-        private void textPassword_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == 13)
-                btnLogin.PerformClick();
-        }
-
-        private void lnkRegistrazione_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Registrazione reg = new Registrazione();
-            reg.Show();
-            this.Hide();
         }
 
     }
