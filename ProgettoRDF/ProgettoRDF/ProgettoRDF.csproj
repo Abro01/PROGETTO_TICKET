@@ -52,11 +52,11 @@
     <Compile Include="Elementi\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EventiInfo.cs">
+    <Compile Include="FormInterfacciaCEO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventiInfo.Designer.cs">
-      <DependentUpon>EventiInfo.cs</DependentUpon>
+    <Compile Include="FormInterfacciaCEO.Designer.cs">
+      <DependentUpon>FormInterfacciaCEO.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInterfacciaUtente.cs">
       <SubType>Form</SubType>
@@ -64,11 +64,29 @@
     <Compile Include="FormInterfacciaUtente.Designer.cs">
       <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CEO\FormProfiloCEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CEO\FormProfiloCEO.Designer.cs">
+      <DependentUpon>FormProfiloCEO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Utente\FormHomeUtente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Utente\FormHomeUtente.Designer.cs">
       <DependentUpon>FormHomeUtente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utente\FormImpostazioniUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utente\FormImpostazioniUtente.Designer.cs">
+      <DependentUpon>FormImpostazioniUtente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utente\FormProfiloUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utente\FormProfiloUtente.Designer.cs">
+      <DependentUpon>FormProfiloUtente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Utente\FormRicercaUtente.cs">
       <SubType>Form</SubType>
@@ -89,19 +107,7 @@
     <Compile Include="MenuCEO.Designer.cs">
       <DependentUpon>MenuCEO.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuUtenti.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuUtenti.Designer.cs">
-      <DependentUpon>MenuUtenti.cs</DependentUpon>
-    </Compile>
     <Compile Include="myDBconnection.cs" />
-    <Compile Include="Profilo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profilo.Designer.cs">
-      <DependentUpon>Profilo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Registrazione.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,14 +117,23 @@
     <Compile Include="ThemeColor.cs" />
     <Compile Include="Utente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EventiInfo.resx">
-      <DependentUpon>EventiInfo.cs</DependentUpon>
+    <EmbeddedResource Include="FormInterfacciaCEO.resx">
+      <DependentUpon>FormInterfacciaCEO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInterfacciaUtente.resx">
       <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CEO\FormProfiloCEO.resx">
+      <DependentUpon>FormProfiloCEO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Utente\FormHomeUtente.resx">
       <DependentUpon>FormHomeUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utente\FormImpostazioniUtente.resx">
+      <DependentUpon>FormImpostazioniUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utente\FormProfiloUtente.resx">
+      <DependentUpon>FormProfiloUtente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Utente\FormRicercaUtente.resx">
       <DependentUpon>FormRicercaUtente.cs</DependentUpon>
@@ -128,12 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuCEO.resx">
       <DependentUpon>MenuCEO.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuUtenti.resx">
-      <DependentUpon>MenuUtenti.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Profilo.resx">
-      <DependentUpon>Profilo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

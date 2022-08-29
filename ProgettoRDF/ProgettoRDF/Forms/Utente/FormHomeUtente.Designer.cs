@@ -37,10 +37,10 @@
             // 
             this.lblDescrizioneDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescrizioneDesktop.AutoSize = true;
-            this.lblDescrizioneDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescrizioneDesktop.Location = new System.Drawing.Point(193, 299);
+            this.lblDescrizioneDesktop.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescrizioneDesktop.Location = new System.Drawing.Point(246, 287);
             this.lblDescrizioneDesktop.Name = "lblDescrizioneDesktop";
-            this.lblDescrizioneDesktop.Size = new System.Drawing.Size(850, 128);
+            this.lblDescrizioneDesktop.Size = new System.Drawing.Size(765, 140);
             this.lblDescrizioneDesktop.TabIndex = 4;
             this.lblDescrizioneDesktop.Text = resources.GetString("lblDescrizioneDesktop.Text");
             this.lblDescrizioneDesktop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -50,7 +50,7 @@
             this.lblTitoloDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitoloDesktop.AutoSize = true;
             this.lblTitoloDesktop.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitoloDesktop.Location = new System.Drawing.Point(516, 181);
+            this.lblTitoloDesktop.Location = new System.Drawing.Point(516, 140);
             this.lblTitoloDesktop.Name = "lblTitoloDesktop";
             this.lblTitoloDesktop.Size = new System.Drawing.Size(203, 49);
             this.lblTitoloDesktop.TabIndex = 3;
@@ -66,7 +66,7 @@
             this.Controls.Add(this.lblTitoloDesktop);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormHomeUtente";
-            this.Text = "FormHomeUtente";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.FormHomeUtente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

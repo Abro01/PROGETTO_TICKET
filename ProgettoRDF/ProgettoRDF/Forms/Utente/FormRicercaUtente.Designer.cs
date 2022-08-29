@@ -37,25 +37,27 @@
             // 
             // btnCerca
             // 
+            this.btnCerca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCerca.BackColor = System.Drawing.Color.White;
             this.btnCerca.BackgroundColor = System.Drawing.Color.White;
-            this.btnCerca.Colore_bordo = System.Drawing.Color.Red;
+            this.btnCerca.Colore_bordo = System.Drawing.Color.Empty;
             this.btnCerca.FlatAppearance.BorderSize = 0;
             this.btnCerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerca.ForeColor = System.Drawing.Color.Red;
-            this.btnCerca.Location = new System.Drawing.Point(884, 88);
+            this.btnCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCerca.Location = new System.Drawing.Point(882, 79);
             this.btnCerca.Name = "btnCerca";
             this.btnCerca.Radius_bordo = 40;
-            this.btnCerca.Size = new System.Drawing.Size(148, 45);
+            this.btnCerca.Size = new System.Drawing.Size(166, 60);
             this.btnCerca.Size_bordo = 2;
             this.btnCerca.TabIndex = 21;
             this.btnCerca.Text = "CERCA";
-            this.btnCerca.TextColor = System.Drawing.Color.Red;
+            this.btnCerca.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnCerca.UseVisualStyleBackColor = false;
             this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
             // 
             // lblNomeEvento
             // 
+            this.lblNomeEvento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNomeEvento.AutoSize = true;
             this.lblNomeEvento.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeEvento.Location = new System.Drawing.Point(241, 88);
@@ -66,6 +68,7 @@
             // 
             // txtNomeEvento
             // 
+            this.txtNomeEvento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeEvento.Location = new System.Drawing.Point(448, 97);
             this.txtNomeEvento.Name = "txtNomeEvento";
             this.txtNomeEvento.Size = new System.Drawing.Size(404, 26);
@@ -73,8 +76,9 @@
             // 
             // dtRisultati
             // 
+            this.dtRisultati.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtRisultati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtRisultati.Location = new System.Drawing.Point(138, 188);
+            this.dtRisultati.Location = new System.Drawing.Point(121, 187);
             this.dtRisultati.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtRisultati.Name = "dtRisultati";
             this.dtRisultati.RowHeadersWidth = 62;
@@ -93,7 +97,7 @@
             this.Controls.Add(this.txtNomeEvento);
             this.Controls.Add(this.dtRisultati);
             this.Name = "FormRicercaUtente";
-            this.Text = "FormRicercaUtente";
+            this.Text = "Ricerca";
             this.Load += new System.EventHandler(this.FormRicercaUtente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtRisultati)).EndInit();
             this.ResumeLayout(false);

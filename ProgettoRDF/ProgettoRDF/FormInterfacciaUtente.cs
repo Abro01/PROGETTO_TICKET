@@ -126,12 +126,12 @@ namespace ProgettoRDF
 
         private void btnProfilo_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Utente.FormProfiloUtente(), sender);
         }
 
         private void btnImpostazioni_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Utente.FormImpostazioniUtente(), sender);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

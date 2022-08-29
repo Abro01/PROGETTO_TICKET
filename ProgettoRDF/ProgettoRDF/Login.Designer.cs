@@ -108,6 +108,7 @@
             // 
             // lblTitolo
             // 
+            this.lblTitolo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitolo.AutoSize = true;
             this.lblTitolo.Font = new System.Drawing.Font("Century", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitolo.ForeColor = System.Drawing.Color.White;
@@ -119,6 +120,7 @@
             // 
             // cbCEOlogin
             // 
+            this.cbCEOlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbCEOlogin.AutoSize = true;
             this.cbCEOlogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.cbCEOlogin.Location = new System.Drawing.Point(711, 389);
@@ -130,6 +132,7 @@
             // 
             // lnkRegistrazione
             // 
+            this.lnkRegistrazione.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lnkRegistrazione.AutoSize = true;
             this.lnkRegistrazione.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.lnkRegistrazione.LinkColor = System.Drawing.Color.Black;
@@ -143,6 +146,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +160,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -168,6 +173,7 @@
             // 
             // textPassword
             // 
+            this.textPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(118)))), ((int)(((byte)(135)))));
             this.textPassword.Location = new System.Drawing.Point(711, 350);
             this.textPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -179,6 +185,7 @@
             // 
             // textEmail
             // 
+            this.textEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(118)))), ((int)(((byte)(135)))));
             this.textEmail.Location = new System.Drawing.Point(711, 302);
             this.textEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -188,6 +195,7 @@
             // 
             // lblTitoloDescrizione
             // 
+            this.lblTitoloDescrizione.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitoloDescrizione.AutoSize = true;
             this.lblTitoloDescrizione.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitoloDescrizione.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -199,6 +207,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClear.BackColor = System.Drawing.Color.White;
             this.btnClear.BackgroundColor = System.Drawing.Color.White;
             this.btnClear.Colore_bordo = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -218,6 +227,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.BackgroundColor = System.Drawing.Color.White;
             this.btnLogin.Colore_bordo = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
