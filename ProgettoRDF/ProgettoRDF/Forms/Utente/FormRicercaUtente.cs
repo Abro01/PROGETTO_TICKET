@@ -29,7 +29,7 @@ namespace ProgettoRDF.Forms.Utente
         {
             LoadTheme();
 
-            string query = "SELECT e.* " +
+            string query = "SELECT e.ID, e.nome, e.genere, e.luogo, e.Nposti " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione ";
 
