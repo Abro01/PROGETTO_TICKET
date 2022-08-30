@@ -142,11 +142,11 @@
             this.lblTitolo.AutoSize = true;
             this.lblTitolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitolo.ForeColor = System.Drawing.Color.White;
-            this.lblTitolo.Location = new System.Drawing.Point(579, 19);
+            this.lblTitolo.Location = new System.Drawing.Point(543, 19);
             this.lblTitolo.Name = "lblTitolo";
-            this.lblTitolo.Size = new System.Drawing.Size(116, 37);
+            this.lblTitolo.Size = new System.Drawing.Size(173, 37);
             this.lblTitolo.TabIndex = 0;
-            this.lblTitolo.Text = "HOME";
+            this.lblTitolo.Text = "Anteprima";
             // 
             // pictureBox1
             // 

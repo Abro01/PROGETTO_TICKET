@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProgettoRDF.Forms.Utente
+namespace ProgettoRDF.Forms.CEO
 {
-    public partial class FormImpostazioniUtente : Form
+    public partial class FormImpostazioniCEO : Form
     {
         myDBconnection con = new myDBconnection();
         DataTable dt = new DataTable();
-        public FormImpostazioniUtente()
+        public FormImpostazioniCEO()
         {
             InitializeComponent();
             con.Connect();
@@ -37,17 +37,15 @@ namespace ProgettoRDF.Forms.Utente
             lblTitoloImpo.ForeColor = ThemeColor.SecondaryColor;
             lblNome.ForeColor = ThemeColor.SecondaryColor;
             lblCognome.ForeColor = ThemeColor.SecondaryColor;
-            lblUsername.ForeColor = ThemeColor.SecondaryColor;
             lblEmail.ForeColor = ThemeColor.SecondaryColor;
             txtNome.ForeColor = ThemeColor.PrimaryColor;
             txtCognome.ForeColor = ThemeColor.PrimaryColor;
-            txtUsername.ForeColor = ThemeColor.PrimaryColor;
             txtEmail.ForeColor = ThemeColor.PrimaryColor;
             btnModifica.Colore_bordo = ThemeColor.SecondaryColor;
             btnModifica.TextColor = ThemeColor.SecondaryColor;
         }
 
-        private void FormImpostazioniUtente_Load(object sender, EventArgs e)
+        private void FormImpostazioniCEO_Load(object sender, EventArgs e)
         {
             LoadTheme();
         }
@@ -58,8 +56,8 @@ namespace ProgettoRDF.Forms.Utente
             {
                 con.cn.Open();
 
-                string query = "UPDATE utenti " + 
-                               "SET Nome = '" + txtNome.Text + "', Cognome = '" + txtCognome.Text + "', Username = '" + txtUsername.Text + "', Email = '" + txtEmail.Text + "' " +
+                string query = "UPDATE ceo_organizzazioni " +
+                               "SET Nome = '" + txtNome.Text + "', Cognome = '" + txtCognome.Text + "', Email = '" + txtEmail.Text + "' " +
                                "WHERE ID = '" + LoginInfo.UserID + "'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
@@ -70,7 +68,6 @@ namespace ProgettoRDF.Forms.Utente
                 txtNome.Clear();
                 txtCognome.Clear();
                 txtEmail.Clear();
-                txtUsername.Clear();
             }
             catch (Exception ex)
             {
@@ -81,6 +78,5 @@ namespace ProgettoRDF.Forms.Utente
                 con.cn.Close();
             }
         }
-
     }
 }

@@ -41,7 +41,7 @@
             // 
             this.lblEmail2.AutoSize = true;
             this.lblEmail2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail2.Location = new System.Drawing.Point(460, 370);
+            this.lblEmail2.Location = new System.Drawing.Point(691, 364);
             this.lblEmail2.Name = "lblEmail2";
             this.lblEmail2.Size = new System.Drawing.Size(83, 35);
             this.lblEmail2.TabIndex = 21;
@@ -51,7 +51,7 @@
             // 
             this.lblCognome2.AutoSize = true;
             this.lblCognome2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCognome2.Location = new System.Drawing.Point(460, 310);
+            this.lblCognome2.Location = new System.Drawing.Point(691, 304);
             this.lblCognome2.Name = "lblCognome2";
             this.lblCognome2.Size = new System.Drawing.Size(83, 35);
             this.lblCognome2.TabIndex = 20;
@@ -61,7 +61,7 @@
             // 
             this.lblNome2.AutoSize = true;
             this.lblNome2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome2.Location = new System.Drawing.Point(460, 249);
+            this.lblNome2.Location = new System.Drawing.Point(691, 243);
             this.lblNome2.Name = "lblNome2";
             this.lblNome2.Size = new System.Drawing.Size(83, 35);
             this.lblNome2.TabIndex = 19;
@@ -72,7 +72,7 @@
             this.lblCognome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCognome.AutoSize = true;
             this.lblCognome.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCognome.Location = new System.Drawing.Point(238, 310);
+            this.lblCognome.Location = new System.Drawing.Point(469, 304);
             this.lblCognome.Name = "lblCognome";
             this.lblCognome.Size = new System.Drawing.Size(133, 35);
             this.lblCognome.TabIndex = 18;
@@ -84,7 +84,7 @@
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(238, 370);
+            this.lblEmail.Location = new System.Drawing.Point(469, 364);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(88, 35);
             this.lblEmail.TabIndex = 16;
@@ -96,7 +96,7 @@
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(238, 249);
+            this.lblNome.Location = new System.Drawing.Point(469, 243);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(93, 35);
             this.lblNome.TabIndex = 15;

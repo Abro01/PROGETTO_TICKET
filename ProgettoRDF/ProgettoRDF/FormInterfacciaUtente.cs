@@ -154,7 +154,7 @@ namespace ProgettoRDF
         private void Reset()
         {
             DisableButton();
-            lblTitolo.Text = "HOME";
+            lblTitolo.Text = "Anteprima";
             pnlTitolo.BackColor = Color.FromArgb(0, 150, 136);
             pnlLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;

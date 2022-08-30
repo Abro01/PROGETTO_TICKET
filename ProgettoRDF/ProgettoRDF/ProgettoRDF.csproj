@@ -64,6 +64,18 @@
     <Compile Include="FormInterfacciaUtente.Designer.cs">
       <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CEO\FormHomeCEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CEO\FormHomeCEO.Designer.cs">
+      <DependentUpon>FormHomeCEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CEO\FormImpostazioniCEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CEO\FormImpostazioniCEO.Designer.cs">
+      <DependentUpon>FormImpostazioniCEO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CEO\FormProfiloCEO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInterfacciaUtente.resx">
       <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CEO\FormHomeCEO.resx">
+      <DependentUpon>FormHomeCEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CEO\FormImpostazioniCEO.resx">
+      <DependentUpon>FormImpostazioniCEO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CEO\FormProfiloCEO.resx">
       <DependentUpon>FormProfiloCEO.cs</DependentUpon>

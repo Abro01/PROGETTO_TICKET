@@ -50,7 +50,7 @@ namespace ProgettoRDF.Forms.CEO
             con.cn.Open();
             try
             {
-                string query = "SELECT * FROM utenti WHERE ID = '" + LoginInfo.UserID + "'";
+                string query = "SELECT * FROM ceo_organizzazioni WHERE ID = '" + LoginInfo.UserID + "'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
                 sda.Fill(dt);

@@ -66,6 +66,7 @@
             this.pnlTitolo.Name = "pnlTitolo";
             this.pnlTitolo.Size = new System.Drawing.Size(1258, 80);
             this.pnlTitolo.TabIndex = 4;
+            this.pnlTitolo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitolo_MouseDown);
             // 
             // btnMinimize
             // 
@@ -80,6 +81,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(42, 38);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnMaximize
             // 
@@ -94,6 +96,7 @@
             this.btnMaximize.Size = new System.Drawing.Size(42, 41);
             this.btnMaximize.TabIndex = 3;
             this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // btnClose
             // 
@@ -108,6 +111,7 @@
             this.btnClose.Size = new System.Drawing.Size(42, 44);
             this.btnClose.TabIndex = 2;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCloseChildForm
             // 
@@ -120,6 +124,7 @@
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
             this.btnCloseChildForm.TabIndex = 1;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // lblTitolo
             // 
@@ -127,11 +132,11 @@
             this.lblTitolo.AutoSize = true;
             this.lblTitolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitolo.ForeColor = System.Drawing.Color.White;
-            this.lblTitolo.Location = new System.Drawing.Point(579, 19);
+            this.lblTitolo.Location = new System.Drawing.Point(543, 19);
             this.lblTitolo.Name = "lblTitolo";
-            this.lblTitolo.Size = new System.Drawing.Size(116, 37);
+            this.lblTitolo.Size = new System.Drawing.Size(173, 37);
             this.lblTitolo.TabIndex = 0;
-            this.lblTitolo.Text = "HOME";
+            this.lblTitolo.Text = "Anteprima";
             // 
             // pnlLogo
             // 
@@ -188,6 +193,7 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnImpostazioni
             // 
@@ -207,6 +213,7 @@
             this.btnImpostazioni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImpostazioni.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImpostazioni.UseVisualStyleBackColor = true;
+            this.btnImpostazioni.Click += new System.EventHandler(this.btnImpostazioni_Click);
             // 
             // btnProfilo
             // 
@@ -226,6 +233,7 @@
             this.btnProfilo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfilo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProfilo.UseVisualStyleBackColor = true;
+            this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
             // 
             // btnCarrello
             // 
@@ -245,6 +253,7 @@
             this.btnCarrello.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCarrello.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCarrello.UseVisualStyleBackColor = true;
+            this.btnCarrello.Click += new System.EventHandler(this.btnCarrello_Click);
             // 
             // btnCerca
             // 
@@ -264,6 +273,7 @@
             this.btnCerca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerca.UseVisualStyleBackColor = true;
+            this.btnCerca.Click += new System.EventHandler(this.btnCerca_Click);
             // 
             // btnHome
             // 
@@ -283,6 +293,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pnlDesktop
             // 
@@ -315,6 +326,7 @@
             this.Controls.Add(this.pnlMenu);
             this.Name = "FormInterfacciaCEO";
             this.Text = "FormInterfacciaCEO";
+            this.Load += new System.EventHandler(this.FormInterfacciaCEO_Load);
             this.pnlTitolo.ResumeLayout(false);
             this.pnlTitolo.PerformLayout();
             this.pnlLogo.ResumeLayout(false);
