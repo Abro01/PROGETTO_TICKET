@@ -70,3 +70,6 @@ C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormImpostazioniUtente.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormProfiloUtente.resources
 C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormRicercaUtente.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormAcquistaBiglietto.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.CEO.FormRicercaCEO.resources
+C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.CEO.FormListaEventi.resources

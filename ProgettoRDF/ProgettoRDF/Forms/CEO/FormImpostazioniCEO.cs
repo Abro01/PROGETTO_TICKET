@@ -41,8 +41,8 @@ namespace ProgettoRDF.Forms.CEO
             txtNome.ForeColor = ThemeColor.PrimaryColor;
             txtCognome.ForeColor = ThemeColor.PrimaryColor;
             txtEmail.ForeColor = ThemeColor.PrimaryColor;
-            btnModifica.Colore_bordo = ThemeColor.SecondaryColor;
-            btnModifica.TextColor = ThemeColor.SecondaryColor;
+            btnModifica.Colore_bordo = ThemeColor.PrimaryColor;
+            btnModifica.TextColor = ThemeColor.PrimaryColor;
         }
 
         private void FormImpostazioniCEO_Load(object sender, EventArgs e)

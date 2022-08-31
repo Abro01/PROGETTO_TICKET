@@ -43,8 +43,8 @@ namespace ProgettoRDF.Forms.Utente
             txtCognome.ForeColor = ThemeColor.PrimaryColor;
             txtUsername.ForeColor = ThemeColor.PrimaryColor;
             txtEmail.ForeColor = ThemeColor.PrimaryColor;
-            btnModifica.Colore_bordo = ThemeColor.SecondaryColor;
-            btnModifica.TextColor = ThemeColor.SecondaryColor;
+            btnModifica.Colore_bordo = ThemeColor.PrimaryColor;
+            btnModifica.TextColor = ThemeColor.PrimaryColor;
         }
 
         private void FormImpostazioniUtente_Load(object sender, EventArgs e)

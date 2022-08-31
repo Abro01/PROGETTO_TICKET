@@ -115,12 +115,12 @@ namespace ProgettoRDF
 
         private void btnCerca_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.CEO.FormRicercaCEO(), sender);
         }
 
-        private void btnCarrello_Click(object sender, EventArgs e)
+        private void btnLista_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.CEO.FormListaEventiCEO(), sender);
         }
 
         private void btnProfilo_Click(object sender, EventArgs e)

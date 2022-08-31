@@ -117,12 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblDescrizioneDesktop.Text" xml:space="preserve">
-    <value>Tramite questo portale ogni utente CEO può
-creare i propri eventi, visualizzare la lista degli
-gli utenti che hanno acquistato biglietti per gli
-eventi organizzati, acquistare biglieti per partecipare 
-ulteriormente ad altri concerti/sagre/mostre.
-</value>
-  </data>
 </root>
