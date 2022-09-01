@@ -60,7 +60,7 @@ namespace ProgettoRDF.Forms.Utente
                 string query = "SELECT e.* " +
                                "FROM ceo_organizzazioni c, organizzazione o, eventi e " +
                                "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
-                               "";
+                               "AND e.ID= '" + LoginInfo.IdEvento +"'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
                 sda.Fill(dt);
@@ -78,7 +78,7 @@ namespace ProgettoRDF.Forms.Utente
             lblLuogo2.Text = dt.Rows[0]["Luogo"].ToString();
             lblDescrizione2.Text = dt.Rows[0]["Descrizione"].ToString();
             lblPosti2.Text = dt.Rows[0]["NPosti"].ToString();
-            lblOrganizzazione2.Text = dt.Rows[0]["Organizzazione"].ToString();
+            lblOrganizzazione2.Text = dt.Rows[0]["Nome"].ToString();
         }
     }
 }
