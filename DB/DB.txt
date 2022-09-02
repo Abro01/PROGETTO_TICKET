@@ -54,3 +54,12 @@ CREATE TABLE utenti_biglietti(
     FOREIGN KEY(CODUtente) REFERENCES utenti(ID),
     FOREIGN KEY(CODBiglietto) REFERENCES biglietti(ID)
 );
+
+CREATE TABLE ceo_biglietti(
+    ID int AUTO_INCREMENT NOT NULL  PRIMARY KEY,
+    Premium ENUM("SI", "NO") NOT NULL,
+    CODBiglietto int NOT NULL,
+    CODCeo int NOT NULL,
+    FOREIGN KEY(CODBiglietto) REFERENCES biglietti(ID),
+    FOREIGN KEY(CODCeo) REFERENCES ceo_organizzazioni(ID)
+);

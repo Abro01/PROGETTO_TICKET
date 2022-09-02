@@ -119,11 +119,6 @@ namespace ProgettoRDF
             OpenChildForm(new Forms.Utente.FormRicercaUtente(), sender);
         }
 
-        private void btnCarrello_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-        }
-
         private void btnProfilo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Utente.FormProfiloUtente(), sender);

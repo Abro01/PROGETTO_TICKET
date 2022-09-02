@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ProgettoRDF.Forms.Utente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace ProgettoRDF.Forms.CEO
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
                            "AND e.Nome = '" + nomeEvento + "' " +
-                           "AND c.ID != '" + LoginInfo.UserID + "'";;
+                           "AND c.ID != '" + LoginInfo.UserID + "'";
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);
             da.Fill(dt);
@@ -70,6 +71,8 @@ namespace ProgettoRDF.Forms.CEO
             LoginInfo.IdEvento = Int16.Parse(idEvento);
             //EventiInfo ei = new EventiInfo();
             //ei.Show();
+            FormAcquistoBigliettoCEO fa = new FormAcquistoBigliettoCEO();
+            fa.Show();
             this.Hide();
         }
 

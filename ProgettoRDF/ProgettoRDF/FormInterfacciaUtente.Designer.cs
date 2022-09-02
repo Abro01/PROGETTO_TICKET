@@ -41,7 +41,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnImpostazioni = new System.Windows.Forms.Button();
             this.btnProfilo = new System.Windows.Forms.Button();
-            this.btnCarrello = new System.Windows.Forms.Button();
             this.btnCerca = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -165,7 +164,6 @@
             this.pnlMenu.Controls.Add(this.btnLogout);
             this.pnlMenu.Controls.Add(this.btnImpostazioni);
             this.pnlMenu.Controls.Add(this.btnProfilo);
-            this.pnlMenu.Controls.Add(this.btnCarrello);
             this.pnlMenu.Controls.Add(this.btnCerca);
             this.pnlMenu.Controls.Add(this.btnHome);
             this.pnlMenu.Controls.Add(this.pnlLogo);
@@ -184,7 +182,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 380);
+            this.btnLogout.Location = new System.Drawing.Point(0, 320);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnLogout.Size = new System.Drawing.Size(220, 60);
@@ -204,7 +202,7 @@
             this.btnImpostazioni.ForeColor = System.Drawing.Color.White;
             this.btnImpostazioni.Image = ((System.Drawing.Image)(resources.GetObject("btnImpostazioni.Image")));
             this.btnImpostazioni.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImpostazioni.Location = new System.Drawing.Point(0, 320);
+            this.btnImpostazioni.Location = new System.Drawing.Point(0, 260);
             this.btnImpostazioni.Name = "btnImpostazioni";
             this.btnImpostazioni.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnImpostazioni.Size = new System.Drawing.Size(220, 60);
@@ -224,7 +222,7 @@
             this.btnProfilo.ForeColor = System.Drawing.Color.White;
             this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
             this.btnProfilo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfilo.Location = new System.Drawing.Point(0, 260);
+            this.btnProfilo.Location = new System.Drawing.Point(0, 200);
             this.btnProfilo.Name = "btnProfilo";
             this.btnProfilo.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnProfilo.Size = new System.Drawing.Size(220, 60);
@@ -234,26 +232,6 @@
             this.btnProfilo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProfilo.UseVisualStyleBackColor = true;
             this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
-            // 
-            // btnCarrello
-            // 
-            this.btnCarrello.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCarrello.FlatAppearance.BorderSize = 0;
-            this.btnCarrello.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarrello.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarrello.ForeColor = System.Drawing.Color.White;
-            this.btnCarrello.Image = ((System.Drawing.Image)(resources.GetObject("btnCarrello.Image")));
-            this.btnCarrello.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarrello.Location = new System.Drawing.Point(0, 200);
-            this.btnCarrello.Name = "btnCarrello";
-            this.btnCarrello.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnCarrello.Size = new System.Drawing.Size(220, 60);
-            this.btnCarrello.TabIndex = 3;
-            this.btnCarrello.Text = "  Carrello";
-            this.btnCarrello.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarrello.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCarrello.UseVisualStyleBackColor = true;
-            this.btnCarrello.Click += new System.EventHandler(this.btnCarrello_Click);
             // 
             // btnCerca
             // 
@@ -353,7 +331,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnImpostazioni;
         private System.Windows.Forms.Button btnProfilo;
-        private System.Windows.Forms.Button btnCarrello;
         private System.Windows.Forms.Button btnCerca;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel pnlLogo;

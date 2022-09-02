@@ -64,6 +64,12 @@
     <Compile Include="FormInterfacciaUtente.Designer.cs">
       <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CEO\FormAcquistoBigliettoCEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CEO\FormAcquistoBigliettoCEO.Designer.cs">
+      <DependentUpon>FormAcquistoBigliettoCEO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CEO\FormHomeCEO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="Forms\CEO\FormImpostazioniCEO.Designer.cs">
       <DependentUpon>FormImpostazioniCEO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CEO\FormInfoEventi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CEO\FormInfoEventi.Designer.cs">
+      <DependentUpon>FormInfoEventi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CEO\FormListaEventiCEO.cs">
       <SubType>Form</SubType>
@@ -131,12 +143,6 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginInfo.cs" />
-    <Compile Include="MenuCEO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuCEO.Designer.cs">
-      <DependentUpon>MenuCEO.cs</DependentUpon>
-    </Compile>
     <Compile Include="myDBconnection.cs" />
     <Compile Include="Registrazione.cs">
       <SubType>Form</SubType>
@@ -153,11 +159,17 @@
     <EmbeddedResource Include="FormInterfacciaUtente.resx">
       <DependentUpon>FormInterfacciaUtente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CEO\FormAcquistoBigliettoCEO.resx">
+      <DependentUpon>FormAcquistoBigliettoCEO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CEO\FormHomeCEO.resx">
       <DependentUpon>FormHomeCEO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CEO\FormImpostazioniCEO.resx">
       <DependentUpon>FormImpostazioniCEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CEO\FormInfoEventi.resx">
+      <DependentUpon>FormInfoEventi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CEO\FormListaEventiCEO.resx">
       <DependentUpon>FormListaEventiCEO.cs</DependentUpon>
@@ -185,9 +197,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCEO.resx">
-      <DependentUpon>MenuCEO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

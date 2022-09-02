@@ -54,7 +54,7 @@ namespace ProgettoRDF.Forms.CEO
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
                            "AND e.Nome = '" + nomeEvento + "' " +
-                           "AND c.ID = '" + LoginInfo.UserID + "'"; ;
+                           "AND c.ID = '" + LoginInfo.UserID + "'";
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);
             da.Fill(dt);
@@ -73,6 +73,8 @@ namespace ProgettoRDF.Forms.CEO
             LoginInfo.IdEvento = Int16.Parse(idEvento);
             //EventiInfo ei = new EventiInfo();
             //ei.Show();
+            FormInfoEventi fa = new FormInfoEventi();
+            fa.Show();
             this.Hide();
         }
 
@@ -88,6 +90,14 @@ namespace ProgettoRDF.Forms.CEO
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);
             da.Fill(dt);
+
+            dtRisultati.DataSource = dt;
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            dtRisultati.Columns.Add(btn);
+            btn.HeaderText = "Click Data";
+            btn.Text = "INFO";
+            btn.Name = "btn";
+            btn.UseColumnTextForButtonValue = true;
         }
     }
 }

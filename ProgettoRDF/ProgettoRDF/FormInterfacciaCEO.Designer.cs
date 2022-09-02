@@ -137,6 +137,7 @@
             this.lblTitolo.Size = new System.Drawing.Size(173, 37);
             this.lblTitolo.TabIndex = 0;
             this.lblTitolo.Text = "Anteprima";
+            this.lblTitolo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlLogo
             // 
