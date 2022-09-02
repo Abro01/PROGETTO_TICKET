@@ -81,7 +81,7 @@ namespace ProgettoRDF
 
                         string query = $"INSERT INTO `ceo_organizzazioni` (`ID`, `Nome`, `Cognome`, `Email`, `Password`, `CODOrganizzazione`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'), '" + ID + "');";
                         MySqlCommand command = new MySqlCommand(query, con.cn);
-                        command.ExecuteNonQuery();
+                            
                         Login loginReg = new Login();
                         loginReg.Show();
                         this.Hide();
