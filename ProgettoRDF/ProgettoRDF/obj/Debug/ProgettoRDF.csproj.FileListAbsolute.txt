@@ -73,3 +73,6 @@ C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormAcquistaBiglietto.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.CEO.FormRicercaCEO.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.CEO.FormListaEventi.resources
+C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.CEO.FormListaEventiCEO.resources
+C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.CEO.FormRicercaCEO.resources
+C:\Users\Ale\Documents\GitHub\PROGETTO_TICKET\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Forms.Utente.FormAcquistaBiglietto.resources

@@ -91,6 +91,8 @@ namespace ProgettoRDF.Forms.Utente
             LoginInfo.IdEvento = Int16.Parse(idEvento);
             //EventiInfo ei = new EventiInfo();
             //ei.Show();
+            FormAcquistaBiglietto fa = new FormAcquistaBiglietto();
+            fa.Show();
             this.Hide();
         }
     }
