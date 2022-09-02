@@ -37,11 +37,11 @@
             // 
             this.dtUtenti.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtUtenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtUtenti.Location = new System.Drawing.Point(161, 100);
+            this.dtUtenti.Location = new System.Drawing.Point(274, 187);
             this.dtUtenti.Name = "dtUtenti";
             this.dtUtenti.RowHeadersWidth = 62;
             this.dtUtenti.RowTemplate.Height = 28;
-            this.dtUtenti.Size = new System.Drawing.Size(937, 456);
+            this.dtUtenti.Size = new System.Drawing.Size(696, 327);
             this.dtUtenti.TabIndex = 0;
             // 
             // lblTitolo
@@ -49,7 +49,7 @@
             this.lblTitolo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitolo.AutoSize = true;
             this.lblTitolo.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitolo.Location = new System.Drawing.Point(476, 36);
+            this.lblTitolo.Location = new System.Drawing.Point(476, 80);
             this.lblTitolo.Name = "lblTitolo";
             this.lblTitolo.Size = new System.Drawing.Size(307, 35);
             this.lblTitolo.TabIndex = 1;

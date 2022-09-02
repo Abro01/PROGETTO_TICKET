@@ -99,5 +99,16 @@ namespace ProgettoRDF.Forms.CEO
             btn.Name = "btn";
             btn.UseColumnTextForButtonValue = true;
         }
+
+        private void btnAggiungi_Click(object sender, EventArgs e)
+        {
+            /*string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            LoginInfo.IdEvento = Int16.Parse(idEvento);*/
+
+            FormAggiuntaEvento ae = new FormAggiuntaEvento();
+            ae.Show();
+            this.Hide();
+
+        }
     }
 }

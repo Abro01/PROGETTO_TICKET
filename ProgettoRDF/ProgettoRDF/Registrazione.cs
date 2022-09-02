@@ -22,12 +22,12 @@ namespace ProgettoRDF
         {
             InitializeComponent();
             con.Connect();
-            this.Text = string.Empty;
+            this.Text = string.Empty;                                           //QUESTI COMANDI PERMETTONO DI TRASCINARE LA SCHERMATA PRINCIPALE ATTRAVERSO IL PANNELLO IN CUI E' PRESENTE IL TITOLO DI OGNI PAGINA
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]                 //UTILIZZATI PER NASCONDERE LA BARRA IN ALTO
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
@@ -59,7 +59,7 @@ namespace ProgettoRDF
             string userIn = textUser.Text;
             int i = 0;
 
-            if (rbOrganizzatore.Checked==true)
+            if (rbOrganizzatore.Checked==true)          //REGISTRAZIONE ORGANIZZATORE
             {
                 //Controllo che  tutti i campi siano compilati
                 if ((String.IsNullOrEmpty(textEmail.Text)) || (String.IsNullOrEmpty(textPassword.Text)) || (String.IsNullOrEmpty(textNome.Text)) || (String.IsNullOrEmpty(textCognome.Text)))
@@ -72,17 +72,17 @@ namespace ProgettoRDF
                         DataTable DataTableID = new DataTable();
                         string queryID = "SELECT o.ID " +
                                          "FROM organizzazione o " +
-                                         "WHERE o.Nome = '" + this.cbOrg.GetItemText(this.cbOrg.SelectedItem) + "'";
+                                         "WHERE o.Nome = '" + this.cbOrg.GetItemText(this.cbOrg.SelectedItem) + "'";            //ESTRAE L'ID DELL'ORGANIZZAZIONE
                         da = new MySqlDataAdapter(queryID, con.cn);
                         da.Fill(DataTableID);
                         DataRow[] righe = DataTableID.Select();
                         string idSelect = righe[0]["ID"].ToString();
                         int ID = Int32.Parse(idSelect);
 
-                        string query = $"INSERT INTO `ceo_organizzazioni` (`ID`, `Nome`, `Cognome`, `Email`, `Password`, `CODOrganizzazione`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'), '" + ID + "');";
+                        string query = $"INSERT INTO `ceo_organizzazioni` (`ID`, `Nome`, `Cognome`, `Email`, `Password`, `CODOrganizzazione`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'), '" + ID + "');";     //INSERIAMO NEL DATABASE I DATI INSERITI NELLE TEXTBOX E SELEZIONATI NELLA COMBOBOX
                         MySqlCommand command = new MySqlCommand(query, con.cn);
                             
-                        Login loginReg = new Login();
+                        Login loginReg = new Login();                       //SI VIENE PORTATI AL PORTALE DEL LOGIN
                         loginReg.Show();
                         this.Hide();
 
@@ -94,7 +94,7 @@ namespace ProgettoRDF
                         con.cn.Close();
                     }
                 }
-            }else if(rbOrganizzatore.Checked==false)
+            }else if(rbOrganizzatore.Checked==false)                    //REGISTRAZIONE UTENTE NORMALE
             {
                 //Controllo che  tutti i campi siano compilati
                 if ((String.IsNullOrEmpty(textEmail.Text)) || (String.IsNullOrEmpty(textPassword.Text)) || (String.IsNullOrEmpty(textNome.Text)) || (String.IsNullOrEmpty(textCognome.Text)) || (String.IsNullOrEmpty(textUser.Text)))
@@ -104,7 +104,7 @@ namespace ProgettoRDF
                 {
                     try
                     {
-                        string query = $"INSERT INTO `utenti` (`ID`, `Nome`, `Cognome`, `Username`, `Email`, `Password`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textUser.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'));";
+                        string query = $"INSERT INTO `utenti` (`ID`, `Nome`, `Cognome`, `Username`, `Email`, `Password`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textUser.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'));";           //INSERIMENTO DATI
                         MySqlCommand command = new MySqlCommand(query, con.cn);
                         command.ExecuteNonQuery();
                         Login loginReg = new Login();
@@ -136,7 +136,7 @@ namespace ProgettoRDF
                 btnRegistrazione.PerformClick();
         }
 
-        private void rbUtente_CheckedChanged(object sender, EventArgs e)
+        private void rbUtente_CheckedChanged(object sender, EventArgs e)            //SELEZIONA LA REGISTRAZIONE PER GLI UTENTI
         {
             cbOrg.Hide();
             lCodOrg.Hide();
@@ -145,7 +145,7 @@ namespace ProgettoRDF
 
         }
 
-        private void rbOrganizzatore_CheckedChanged(object sender, EventArgs e)
+        private void rbOrganizzatore_CheckedChanged(object sender, EventArgs e)     //SELEZIONA LA REGISTRAZIONE PER GLI ORGANIZZATORI
         {
             lbUser.Hide();
             textUser.Hide();
@@ -153,12 +153,13 @@ namespace ProgettoRDF
             lCodOrg.Show();
         }
 
+        //CHIUDE IL PROGRAMMA
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void btnMaximize_Click(object sender, EventArgs e)                  //GRAZIE A QUESTO BOTTONE E' POSSIBILE MASSIMIZZARE L'ESTENSIONE DELLA PAGINA TANTO QUANTO LA GRANDEZZA DELLO SCHERMO
         {
             if (WindowState == FormWindowState.Normal)
             {
@@ -170,7 +171,7 @@ namespace ProgettoRDF
             }
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)                  //QUESTO BOTTONE PERMETTE DI RIDURRE IL PROGRAMMA A TENDINA
         {
             this.WindowState = FormWindowState.Minimized;
         }

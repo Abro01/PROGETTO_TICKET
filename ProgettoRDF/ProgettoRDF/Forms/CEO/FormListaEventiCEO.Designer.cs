@@ -105,8 +105,9 @@
             this.btnAggiungi.Text = "AGGIUNGI UN EVENTO";
             this.btnAggiungi.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnAggiungi.UseVisualStyleBackColor = false;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
             // 
-            // FormListaEventi
+            // FormListaEventiCEO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +118,7 @@
             this.Controls.Add(this.lblNomeEvento);
             this.Controls.Add(this.txtNomeEvento);
             this.Controls.Add(this.dtRisultati);
-            this.Name = "FormListaEventi";
+            this.Name = "FormListaEventiCEO";
             this.Text = "Lista Eventi";
             this.Load += new System.EventHandler(this.FormListaEventi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtRisultati)).EndInit();
