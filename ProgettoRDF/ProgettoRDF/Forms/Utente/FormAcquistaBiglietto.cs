@@ -69,7 +69,7 @@ namespace ProgettoRDF.Forms.Utente
             {
                 string query = "SELECT e.* " +
                                "FROM ceo_organizzazioni c, organizzazione o, eventi e " +
-                               "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione  " +
+                               "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione  " +        //QUERY PER TROVARE LE INFORMAZIONI DELL'EVENTO SELEZIONATO
                                "AND e.ID= '" + LoginInfo.IdEvento +"'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
@@ -79,16 +79,16 @@ namespace ProgettoRDF.Forms.Utente
                 DataTable dbPrezzo = new DataTable();
                 string query2 = "SELECT b.* " +
                                 "FROM biglietti b, eventi e " +
-                                "WHERE b.CODEvento = e.ID " +
+                                "WHERE b.CODEvento = e.ID " +                   //QUERY PER TROVARE IL PREZZO DI OGNI BIGLIETTO DELL'EVENTO
                                 "AND e.ID= '" + LoginInfo.IdEvento + "'";
 
                 MySqlDataAdapter da = new MySqlDataAdapter(query2, con.cn);
                 da.Fill(dbPrezzo);
 
-                string costo = dbPrezzo.Rows[0]["Costo"].ToString();
+                string costo = dbPrezzo.Rows[0]["Costo"].ToString();        //SALVO IL COSTO DI OGNI BIGLIETTO 
                 prezzo = Int32.Parse(costo);
 
-                string biglietto = dbPrezzo.Rows[0]["ID"].ToString();
+                string biglietto = dbPrezzo.Rows[0]["ID"].ToString();       //SALVO ANCHE L'ID
                 idBiglietto = Int32.Parse(biglietto);
                  
             }
@@ -104,7 +104,7 @@ namespace ProgettoRDF.Forms.Utente
             lblNomeEvento.Text = dt.Rows[0]["Nome"].ToString();
             lblGenere2.Text = dt.Rows[0]["Genere"].ToString();
             lblLuogo2.Text = dt.Rows[0]["Luogo"].ToString();
-            lblDescrizione2.Text = dt.Rows[0]["Descrizione"].ToString();
+            lblDescrizione2.Text = dt.Rows[0]["Descrizione"].ToString();    
             lblPosti2.Text = dt.Rows[0]["NPosti"].ToString();
             lblOrganizzazione2.Text = dt.Rows[0]["Nome"].ToString();
             cbNumBig.SelectedIndex = 0;
@@ -113,10 +113,8 @@ namespace ProgettoRDF.Forms.Utente
 
         private void cbNumBig_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            //MessageBox.Show(prezzo.ToString());
             string app = cbNumBig.Text;
-            int numBig = Int32.Parse(app);
+            int numBig = Int32.Parse(app);          //AGGIORNO IL PREZZO IN BASE AL NUMERO DI BIGLIETTI CHE SI VOGLIONO ACQUISTARE
             costo = prezzo * numBig;
             lPrezzo.Text = costo.ToString();
         }
@@ -128,7 +126,7 @@ namespace ProgettoRDF.Forms.Utente
             con.cn.Open();
 
 
-            for (int i = numBig; i > 0; i--) 
+            for (int i = numBig; i > 0; i--) //CICLO UTILE NEL CASO SI ACQUISTI PIU' DI UN BIGLIETTO 
             { 
 
                 if (cbPremium.Checked)
@@ -137,7 +135,7 @@ namespace ProgettoRDF.Forms.Utente
                     try
                     {
                         string query = $"INSERT INTO utenti_biglietti  (`ID`, `Premium`, `CODUtente`, `CODBiglietto`) VALUES ('', 'SI', '" + LoginInfo.UserID + "', '" + idBiglietto + "');";
-                        MySqlCommand command = new MySqlCommand(query, con.cn);
+                        MySqlCommand command = new MySqlCommand(query, con.cn); //INSERIMENTO IN CASO SIA UN BIGLIETTO PREMIUM
                         command.ExecuteNonQuery();
                     }
                     catch (Exception ex)
@@ -150,7 +148,7 @@ namespace ProgettoRDF.Forms.Utente
                     try
                     {
                         string query = $"INSERT INTO utenti_biglietti  (`ID`, `Premium`, `CODUtente`, `CODBiglietto`) VALUES ('', 'NO', '" + LoginInfo.UserID + "', '" + idBiglietto + "');";
-                        MySqlCommand command = new MySqlCommand(query, con.cn);
+                        MySqlCommand command = new MySqlCommand(query, con.cn); //INSERIMENTO SE NON E' STATO FLAGGATO IL PREMIUM
                         command.ExecuteNonQuery();
                     }
                     catch (Exception ex)
@@ -161,7 +159,7 @@ namespace ProgettoRDF.Forms.Utente
             }
             string queryE =  "UPDATE eventi "+ 
                              "SET Nposti = Nposti - " + numBig +
-                             " WHERE ID = '" + LoginInfo.IdEvento + "'";
+                             " WHERE ID = '" + LoginInfo.IdEvento + "'"; //AGGIORNO IL  NUMERO DI BIGLIETTI DISPONIBILI PER L'EVENTO SCELTO
 
             MySqlCommand commandE = new MySqlCommand(queryE, con.cn);
             commandE.ExecuteNonQuery();

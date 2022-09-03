@@ -52,7 +52,8 @@ namespace ProgettoRDF.Forms.Utente
             con.cn.Open();
             try
             {
-                string query = "SELECT * FROM utenti WHERE ID = '" + LoginInfo.UserID + "'";
+                string query = "SELECT * FROM utenti WHERE ID = '" + LoginInfo.UserID + "'"; //TRAMITE L'ID SALVATO UNA VOLTA EFFETTUATO IL LOGIN MOSTRO
+                                                                                             //LE INFORMAZIONI DELL'UTENTE LOGGATO
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
                 sda.Fill(dt);

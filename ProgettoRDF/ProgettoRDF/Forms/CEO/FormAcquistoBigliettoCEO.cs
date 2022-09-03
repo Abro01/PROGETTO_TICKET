@@ -67,7 +67,7 @@ namespace ProgettoRDF.Forms.CEO
             {
                 string query = "SELECT e.* " +
                                "FROM ceo_organizzazioni c, organizzazione o, eventi e " +
-                               "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione  " +
+                               "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione  " +    //CERCO LE INFO DELL'EVENTO SELEZIONATO IN PRECEDENZA
                                "AND e.ID= '" + LoginInfo.IdEvento + "'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
@@ -77,7 +77,7 @@ namespace ProgettoRDF.Forms.CEO
                 DataTable dbPrezzo = new DataTable();
                 string query2 = "SELECT b.* " +
                                 "FROM biglietti b, eventi e " +
-                                "WHERE b.CODEvento = e.ID " +
+                                "WHERE b.CODEvento = e.ID " +               //TROVO LE INFORMAZIONI PER IL BIGLIETTO DELL'EVENTO
                                 "AND e.ID= '" + LoginInfo.IdEvento + "'";
 
                 MySqlDataAdapter da = new MySqlDataAdapter(query2, con.cn);
@@ -102,7 +102,7 @@ namespace ProgettoRDF.Forms.CEO
             lblNomeEvento.Text = dt.Rows[0]["Nome"].ToString();
             lblGenere2.Text = dt.Rows[0]["Genere"].ToString();
             lblLuogo2.Text = dt.Rows[0]["Luogo"].ToString();
-            lblDescrizione2.Text = dt.Rows[0]["Descrizione"].ToString();
+            lblDescrizione2.Text = dt.Rows[0]["Descrizione"].ToString();        //METTO LE INFO NELLE LABEL
             lblPosti2.Text = dt.Rows[0]["NPosti"].ToString();
             lblOrganizzazione2.Text = dt.Rows[0]["Nome"].ToString();
             cbNumBig.SelectedIndex = 0;
@@ -110,10 +110,9 @@ namespace ProgettoRDF.Forms.CEO
 
         private void cbNumBig_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show(prezzo.ToString());
             string app = cbNumBig.Text;
             int numBig = Int32.Parse(app);
-            costo = prezzo * numBig;
+            costo = prezzo * numBig;            //CAMBIO IL PREZZO IN BASE AL NUMERO DI BIGLIETTI
             lPrezzo.Text = costo.ToString();
         }
 
@@ -127,7 +126,7 @@ namespace ProgettoRDF.Forms.CEO
             for (int i = numBig; i > 0; i--)
             {
 
-                if (cbPremium.Checked)
+                if (cbPremium.Checked)//CONTROLLO CHE IL FLAG PREMIUM SIA SELEZIONATO OPPURE NO, IN BASE A QUESTO ACQUISTO BIGLIETTI PREMIUM O NORMALI
                 {
                     costo = costo + 50;
                     try

@@ -52,7 +52,7 @@ namespace ProgettoRDF.Forms.CEO
 
             string query = "SELECT e.* " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
-                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
+                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " + //RICERCA EVENTI TRAMITE NOME E SE SONO STATI CREATI DAL CEO LOGGATO
                            "AND e.Nome = '" + nomeEvento + "' " +
                            "AND c.ID = '" + LoginInfo.UserID + "'";
             command = new MySqlCommand(query, con.cn);
@@ -69,7 +69,7 @@ namespace ProgettoRDF.Forms.CEO
 
         private void dtRisultati_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+            string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString(); //SALVO L'ID DELL'EVENTO CLICCATO PER APRIRE LE INFORMAZIONI DELLO STESSO
             LoginInfo.IdEvento = Int16.Parse(idEvento);
             FormInfoEventi fa = new FormInfoEventi();
             fa.Show();
@@ -81,7 +81,7 @@ namespace ProgettoRDF.Forms.CEO
             LoadTheme();
 
             string query = "SELECT e.ID, e.nome, e.genere, e.luogo, e.Nposti " +
-                           "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
+                           "FROM eventi e, organizzazione o, ceo_organizzazioni c " +           //CERCO TUTTI GLI EVENTI CHE SONO STATI CREATI DALL'ORGANIZZAZIONE DEL CEO LOGGATO
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
                            "AND c.ID = '" + LoginInfo.UserID + "'";
 
@@ -100,10 +100,7 @@ namespace ProgettoRDF.Forms.CEO
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
-            /*string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
-            LoginInfo.IdEvento = Int16.Parse(idEvento);*/
-
-            FormAggiuntaEvento ae = new FormAggiuntaEvento();
+            FormAggiuntaEvento ae = new FormAggiuntaEvento(); 
             ae.Show();
             this.Hide();
 

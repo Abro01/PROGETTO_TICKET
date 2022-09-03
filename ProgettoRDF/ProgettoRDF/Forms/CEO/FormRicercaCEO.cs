@@ -49,8 +49,8 @@ namespace ProgettoRDF.Forms.CEO
             dt.Rows.Clear();
 
             string query = "SELECT e.* " +
-                           "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
-                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
+                           "FROM eventi e, organizzazione o, ceo_organizzazioni c " + 
+                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " + //CERCA EVENTO UGUALE A QUELLO PER UTENTE
                            "AND e.Nome = '" + nomeEvento + "' " +
                            "AND c.ID != '" + LoginInfo.UserID + "'";
             command = new MySqlCommand(query, con.cn);
@@ -69,8 +69,6 @@ namespace ProgettoRDF.Forms.CEO
         {
             string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
             LoginInfo.IdEvento = Int16.Parse(idEvento);
-            //EventiInfo ei = new EventiInfo();
-            //ei.Show();
             FormAcquistoBigliettoCEO fa = new FormAcquistoBigliettoCEO();
             fa.Show();
             this.Hide();
@@ -82,7 +80,7 @@ namespace ProgettoRDF.Forms.CEO
 
             string query = "SELECT e.ID, e.nome, e.genere, e.luogo, e.Nposti " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
-                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
+                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " + //MOSTRO TUTTI GLI EVENTI NON ORGANIZZATI DALLE ORGANIZZAZIONI DEL CEO LOGGATO
                            "AND c.ID != '" + LoginInfo.UserID + "'";
 
             command = new MySqlCommand(query, con.cn);

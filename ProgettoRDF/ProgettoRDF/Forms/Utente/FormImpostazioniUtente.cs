@@ -52,7 +52,7 @@ namespace ProgettoRDF.Forms.Utente
             LoadTheme();
         }
 
-        private void btnModifica_Click(object sender, EventArgs e)
+        private void btnModifica_Click(object sender, EventArgs e) //MODIFICA I DATI DELL'UTENTE LOGGATO NEL DATABASE 
         {
             try
             {

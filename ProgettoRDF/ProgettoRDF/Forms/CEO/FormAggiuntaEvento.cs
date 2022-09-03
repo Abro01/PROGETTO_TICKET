@@ -46,14 +46,12 @@ namespace ProgettoRDF.Forms.CEO
             lblDescrizione.ForeColor = ThemeColor.SecondaryColor;
             lblPosti.ForeColor = ThemeColor.SecondaryColor;
             lblCosto.ForeColor = ThemeColor.SecondaryColor;
-            lblOrganizzazione.ForeColor = ThemeColor.SecondaryColor;
             txtNome.ForeColor = ThemeColor.PrimaryColor;
             txtGenere.ForeColor = ThemeColor.PrimaryColor;
             txtLuogo.ForeColor = ThemeColor.PrimaryColor;
             txtDescrizione.ForeColor = ThemeColor.PrimaryColor;
             txtPosti.ForeColor = ThemeColor.PrimaryColor;
             txtCosto.ForeColor = ThemeColor.PrimaryColor;
-            cbOrg.ForeColor = ThemeColor.PrimaryColor;
             btnAggiungi.ForeColor = ThemeColor.PrimaryColor;
             btnAggiungi.Colore_bordo = ThemeColor.PrimaryColor;
             btnAggiungi.TextColor = ThemeColor.PrimaryColor;
@@ -62,20 +60,6 @@ namespace ProgettoRDF.Forms.CEO
         private void FormAggiuntaEvento_Load(object sender, EventArgs e)
         {
             LoadTheme();
-
-            this.cbOrg.DropDownStyle = ComboBoxStyle.DropDownList; //Non permette di scrivere nella combobox facendola diventare di fatto una ddlist
-            int i = 0;
-            string queryOrganizzazioni = "SELECT nome " +
-                                         "FROM organizzazione";
-
-            da = new MySqlDataAdapter(queryOrganizzazioni, con.cn);
-            da.Fill(dt);
-            DataRow[] righe = dt.Select();
-
-            for (i = 0; i < dt.Rows.Count; i++)
-            {
-                cbOrg.Items.Add(righe[i]["nome"]);
-            }
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)
@@ -85,30 +69,30 @@ namespace ProgettoRDF.Forms.CEO
                 con.cn.Open();
 
                 DataTable DataTableID = new DataTable();
-                string queryID = "SELECT o.ID " +
-                                 "FROM organizzazione o " +
-                                 "WHERE o.Nome = '" + this.cbOrg.GetItemText(this.cbOrg.SelectedItem) + "'";
+                string queryID =  "SELECT c.CODOrganizzazione " +             //PRENDO IL CODICE DELL'ORGANIZZAZIONE POSSEDUTA DAL CEO
+                                  "FROM ceo_organizzazioni c " +               //CHE HA EFFETTUATO IL LOGIN PRIMA TRAMITE L'ID SALVATO
+                                  "WHERE c.ID = '" + LoginInfo.UserID + "'";  //IN LOGININFO
                 da = new MySqlDataAdapter(queryID, con.cn);
                 da.Fill(DataTableID);
-                DataRow[] righe = DataTableID.Select();
-                string idSelect = righe[0]["ID"].ToString();
-                int ID = Int32.Parse(idSelect);
-
+                string idS = DataTableID.Rows[0]["CODOrganizzazione"].ToString();
+                int ID  = Int32.Parse(idS);
+                
+                MessageBox.Show(ID.ToString());
                 string queryEvento = $"INSERT INTO eventi (`ID`, `Nome`, `Genere`, `Luogo`, `Descrizione`, `Nposti`, `CODOrganizzazione`) VALUES ('', '" + txtNome.Text + "', '" + txtGenere.Text + "', '" + txtLuogo.Text + "', '" + txtDescrizione.Text + "', '" + txtPosti.Text + "', '" + ID + "')";
 
                 db = new MySqlDataAdapter(queryEvento, con.cn);
                 db.Fill(dt);
 
                 string qId = "SELECT ID " +
-                             "FROM EVENTI WHERE Nome = '" + txtNome.Text + "'";
+                             "FROM EVENTI WHERE Nome = '" + txtNome.Text + "'"; //QUERY CHE  PERMETTE DI TROVARE L'ID DELL'EVENTO APPENA INSERITO 
 
                 MySqlDataAdapter da1 = new MySqlDataAdapter(qId, con.cn);                 
                 da1.Fill(dt3);
 
                 LoginInfo.IdEvento = Int32.Parse(dt3.Rows[0]["ID"].ToString());
-
+                                            //CREAZIONE DEL BIGLIETTO COLLEGATO ALL'EVENTO APPENA CREATO
                 string queryBiglietto = $"INSERT INTO biglietti (`ID`, `Costo`, `CODEvento`) VALUES ('', '" + txtCosto.Text + "', '" + LoginInfo.IdEvento + "')";
-
+                                                
                 ds = new MySqlDataAdapter(queryBiglietto, con.cn);
                 ds.Fill(dt2);
 

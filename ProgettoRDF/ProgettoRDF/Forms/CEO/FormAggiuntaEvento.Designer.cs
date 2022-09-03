@@ -42,8 +42,6 @@
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.lblTitolo = new System.Windows.Forms.Label();
             this.btnAggiungi = new ProgettoRDF.Elementi.RJButton();
-            this.cbOrg = new System.Windows.Forms.ComboBox();
-            this.lblOrganizzazione = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNome
@@ -122,7 +120,7 @@
             // 
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Location = new System.Drawing.Point(355, 64);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(218, 20);
             this.txtNome.TabIndex = 32;
@@ -131,7 +129,7 @@
             // 
             this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescrizione.Location = new System.Drawing.Point(355, 174);
-            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescrizione.Name = "txtDescrizione";
             this.txtDescrizione.Size = new System.Drawing.Size(218, 20);
             this.txtDescrizione.TabIndex = 33;
@@ -140,7 +138,7 @@
             // 
             this.txtLuogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLuogo.Location = new System.Drawing.Point(355, 142);
-            this.txtLuogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLuogo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLuogo.Name = "txtLuogo";
             this.txtLuogo.Size = new System.Drawing.Size(218, 20);
             this.txtLuogo.TabIndex = 34;
@@ -149,7 +147,7 @@
             // 
             this.txtGenere.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtGenere.Location = new System.Drawing.Point(355, 103);
-            this.txtGenere.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGenere.Margin = new System.Windows.Forms.Padding(2);
             this.txtGenere.Name = "txtGenere";
             this.txtGenere.Size = new System.Drawing.Size(218, 20);
             this.txtGenere.TabIndex = 35;
@@ -158,7 +156,7 @@
             // 
             this.txtPosti.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPosti.Location = new System.Drawing.Point(355, 213);
-            this.txtPosti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPosti.Margin = new System.Windows.Forms.Padding(2);
             this.txtPosti.Name = "txtPosti";
             this.txtPosti.Size = new System.Drawing.Size(218, 20);
             this.txtPosti.TabIndex = 36;
@@ -167,7 +165,7 @@
             // 
             this.txtCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCosto.Location = new System.Drawing.Point(355, 252);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(2);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(218, 20);
             this.txtCosto.TabIndex = 37;
@@ -194,8 +192,8 @@
             this.btnAggiungi.FlatAppearance.BorderSize = 0;
             this.btnAggiungi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAggiungi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnAggiungi.Location = new System.Drawing.Point(382, 338);
-            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAggiungi.Location = new System.Drawing.Point(376, 310);
+            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(2);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Radius_bordo = 40;
             this.btnAggiungi.Size = new System.Drawing.Size(111, 39);
@@ -206,35 +204,12 @@
             this.btnAggiungi.UseVisualStyleBackColor = false;
             this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
             // 
-            // cbOrg
-            // 
-            this.cbOrg.FormattingEnabled = true;
-            this.cbOrg.Location = new System.Drawing.Point(355, 291);
-            this.cbOrg.Margin = new System.Windows.Forms.Padding(2);
-            this.cbOrg.Name = "cbOrg";
-            this.cbOrg.Size = new System.Drawing.Size(218, 21);
-            this.cbOrg.TabIndex = 39;
-            // 
-            // lblOrganizzazione
-            // 
-            this.lblOrganizzazione.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblOrganizzazione.AutoSize = true;
-            this.lblOrganizzazione.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrganizzazione.Location = new System.Drawing.Point(185, 286);
-            this.lblOrganizzazione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOrganizzazione.Name = "lblOrganizzazione";
-            this.lblOrganizzazione.Size = new System.Drawing.Size(136, 23);
-            this.lblOrganizzazione.TabIndex = 40;
-            this.lblOrganizzazione.Text = "Organizzazione:";
-            // 
             // FormAggiuntaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(824, 395);
-            this.Controls.Add(this.lblOrganizzazione);
-            this.Controls.Add(this.cbOrg);
             this.Controls.Add(this.lblTitolo);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.txtPosti);
@@ -249,7 +224,7 @@
             this.Controls.Add(this.lblLuogo);
             this.Controls.Add(this.lblGenere);
             this.Controls.Add(this.lblNome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAggiuntaEvento";
             this.Text = "FormAggiuntaEvento";
             this.Load += new System.EventHandler(this.FormAggiuntaEvento_Load);
@@ -274,7 +249,5 @@
         private System.Windows.Forms.TextBox txtPosti;
         private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Label lblTitolo;
-        private System.Windows.Forms.ComboBox cbOrg;
-        private System.Windows.Forms.Label lblOrganizzazione;
     }
 }

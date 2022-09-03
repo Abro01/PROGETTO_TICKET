@@ -47,9 +47,9 @@ namespace ProgettoRDF.Forms.CEO
             try
             {
                    string query="SELECT u.Nome, u.Cognome, u.Username, u.Email " +
-                                "FROM utenti u, biglietti b, utenti_biglietti ub " +
-                                "WHERE b.ID=ub.CODBiglietto AND ub.CODUtente=u.ID " +
-                                "AND b.CODEvento = '" +LoginInfo.IdEvento +"'";
+                                "FROM utenti u, biglietti b, utenti_biglietti ub " +    //CERCO LE INFORMAZIONI DEGLI UTENTI CHE CHE HANNO ACQUISTATO DEI  BIGLIETTI PER UN CERTO EVENTO SELEZIONATO
+                                "WHERE b.ID=ub.CODBiglietto AND ub.CODUtente=u.ID " +   //TRAMITE L'ID DELL'EVENTO
+                                "AND b.CODEvento = '" + LoginInfo.IdEvento + "'";
 
                 command = new MySqlCommand(query, con.cn);
                 da = new MySqlDataAdapter(command);

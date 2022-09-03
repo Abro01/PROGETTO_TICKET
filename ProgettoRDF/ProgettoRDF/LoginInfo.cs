@@ -8,7 +8,7 @@ namespace ProgettoRDF
 {
     public static class LoginInfo
     {   
-        public static int UserID;
+        public static int UserID; //CLASSE UTILE DA UTILIZZARE PER SALVARE INFORMAZIONI VISIBILI IN TUTTO IL PROGRAMMA
         public static int IdEvento;
     }
 }

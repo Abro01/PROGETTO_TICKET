@@ -57,7 +57,7 @@ namespace ProgettoRDF.Forms.CEO
                 con.cn.Open();
 
                 string query = "UPDATE ceo_organizzazioni " +
-                               "SET Nome = '" + txtNome.Text + "', Cognome = '" + txtCognome.Text + "', Email = '" + txtEmail.Text + "' " +
+                               "SET Nome = '" + txtNome.Text + "', Cognome = '" + txtCognome.Text + "', Email = '" + txtEmail.Text + "' " + //MODIFICA SU DATABASE
                                "WHERE ID = '" + LoginInfo.UserID + "'";
 
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
@@ -66,7 +66,7 @@ namespace ProgettoRDF.Forms.CEO
                 MessageBox.Show("I tuoi dati sono stati modificati correttamente.");
 
                 txtNome.Clear();
-                txtCognome.Clear();
+                txtCognome.Clear(); //PULISCO LE TEXTBOX
                 txtEmail.Clear();
             }
             catch (Exception ex)

@@ -17,7 +17,6 @@ namespace ProgettoRDF.Forms.Utente
         MySqlCommand command;
         MySqlDataAdapter da;
         DataTable dt = new DataTable();
-        string id;
 
         public FormRicercaUtente()
         {
@@ -31,7 +30,7 @@ namespace ProgettoRDF.Forms.Utente
 
             string query = "SELECT e.ID, e.nome, e.genere, e.luogo, e.Nposti " +
                            "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
-                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione ";
+                           "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione ";  //MOSTRO TUTTI GLI EVENTI DISPONIBILI
 
             command = new MySqlCommand(query, con.cn);
             da = new MySqlDataAdapter(command);
@@ -41,7 +40,7 @@ namespace ProgettoRDF.Forms.Utente
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             dtRisultati.Columns.Add(btn);
             btn.HeaderText = "Click Data";
-            btn.Text = "ACQUISTA";
+            btn.Text = "ACQUISTA";      //AGGIUNGO UNA COLONNA CON IL PULSANTE ACQUISTA PER OGNI EVENTO
             btn.Name = "btn";
             btn.UseColumnTextForButtonValue = true;
         }
@@ -70,7 +69,7 @@ namespace ProgettoRDF.Forms.Utente
             dt.Rows.Clear();
 
             string query = "SELECT e.* " +
-                           "FROM eventi e, organizzazione o, ceo_organizzazioni c " +
+                           "FROM eventi e, organizzazione o, ceo_organizzazioni c " +         //RICERCA DI UN EVENTO TRAMITE NOME SCRITTO NELLA TEXTBOX
                            "WHERE c.CODOrganizzazione=o.ID AND o.ID=e.CODOrganizzazione " +
                            "AND e.Nome = '" + nomeEvento + "'";
             command = new MySqlCommand(query, con.cn);
@@ -87,10 +86,8 @@ namespace ProgettoRDF.Forms.Utente
 
         private void dtRisultati_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
-            LoginInfo.IdEvento = Int16.Parse(idEvento);
-            //EventiInfo ei = new EventiInfo();
-            //ei.Show();
+            string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();    //UNA VOLTA CLICCATO ACQUSTA NELL'EVENTO SCELTO SALVO L'ID DELL'EVENTO
+            LoginInfo.IdEvento = Int16.Parse(idEvento);                                     //IN LoginInfo E POI SI APRE IL FORM PER ACQUISTARE I BIGLIETTI 
             FormAcquistaBiglietto fa = new FormAcquistaBiglietto();
             fa.Show();
             this.Hide();
