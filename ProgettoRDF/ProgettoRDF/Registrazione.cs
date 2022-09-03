@@ -81,7 +81,7 @@ namespace ProgettoRDF
 
                         string query = $"INSERT INTO `ceo_organizzazioni` (`ID`, `Nome`, `Cognome`, `Email`, `Password`, `CODOrganizzazione`) VALUES ('', '" + textNome.Text + "', '" + textCognome.Text + "', '" + textEmail.Text + "', MD5('" + textPassword.Text + "'), '" + ID + "');";     //INSERIAMO NEL DATABASE I DATI INSERITI NELLE TEXTBOX E SELEZIONATI NELLA COMBOBOX
                         MySqlCommand command = new MySqlCommand(query, con.cn);
-                            
+                        command.ExecuteNonQuery();
                         Login loginReg = new Login();                       //SI VIENE PORTATI AL PORTALE DEL LOGIN
                         loginReg.Show();
                         this.Hide();
@@ -113,7 +113,8 @@ namespace ProgettoRDF
                     }catch
                     {
 
-                    }finally
+                    }
+                    finally
                     {
                         con.cn.Close();
                     }

@@ -15,6 +15,8 @@ namespace ProgettoRDF.Forms.CEO
     {
         myDBconnection con = new myDBconnection();
         DataTable dt = new DataTable();
+        MySqlDataAdapter dt2;
+        DataTable DataTablePosti = new DataTable();
         int prezzo;
         int costo;
         int idBiglietto;
@@ -122,49 +124,68 @@ namespace ProgettoRDF.Forms.CEO
             int numBig = Int32.Parse(app);
             con.cn.Open();
 
+            string queryPosti = "SELECT Nposti " +
+                                "FROM eventi " +
+                                "WHERE ID = '" + LoginInfo.IdEvento + "'";
 
-            for (int i = numBig; i > 0; i--)
+            dt2 = new MySqlDataAdapter(queryPosti, con.cn);
+            dt2.Fill(DataTablePosti);
+            DataRow[] righe = DataTablePosti.Select();
+            string postiSelect = righe[0]["Nposti"].ToString(); //QUERY PER TROVARE IL NUMERO DI POSTI E LO CONRONTO CON I BIGLIETTI CHE VOGLIO ACQUISTARE
+            int Nposti = Int32.Parse(postiSelect);
+
+            if(Nposti >= numBig) //CONTROLLO CHE CI SIANO BIGLIETTI
             {
+                for (int i = numBig; i > 0; i--) 
+                {
 
-                if (cbPremium.Checked)//CONTROLLO CHE IL FLAG PREMIUM SIA SELEZIONATO OPPURE NO, IN BASE A QUESTO ACQUISTO BIGLIETTI PREMIUM O NORMALI
-                {
-                    costo = costo + 50;
-                    try
+                    if (cbPremium.Checked)//CONTROLLO CHE IL FLAG PREMIUM SIA SELEZIONATO OPPURE NO, IN BASE A QUESTO ACQUISTO BIGLIETTI PREMIUM O NORMALI
                     {
-                        string query = $"INSERT INTO ceo_biglietti  (`ID`, `Premium`, `CODBiglietto`, `CODCeo`) VALUES ('', 'SI', '" + idBiglietto + "', '" + LoginInfo.UserID + "');";
-                        MySqlCommand command = new MySqlCommand(query, con.cn);
-                        command.ExecuteNonQuery();
+                        costo = costo + 50;
+                        try
+                        {
+                            string query = $"INSERT INTO ceo_biglietti  (`ID`, `Premium`, `CODBiglietto`, `CODCeo`) VALUES ('', 'SI', '" + idBiglietto + "', '" + LoginInfo.UserID + "');";
+                            MySqlCommand command = new MySqlCommand(query, con.cn);
+                            command.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show(ex.Message);
+                        try
+                        {
+                            string query = $"INSERT INTO ceo_biglietti  (`ID`, `Premium`, `CODBiglietto`, `CODCeo`) VALUES ('', 'NO', '" + idBiglietto + "', '" + LoginInfo.UserID + "');";
+                            MySqlCommand command = new MySqlCommand(query, con.cn);
+                            command.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
-                else
-                {
-                    try
-                    {
-                        string query = $"INSERT INTO ceo_biglietti  (`ID`, `Premium`, `CODBiglietto`, `CODCeo`) VALUES ('', 'NO', '" + idBiglietto + "', '" + LoginInfo.UserID + "');";
-                        MySqlCommand command = new MySqlCommand(query, con.cn);
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
+                string queryE = "UPDATE eventi " +
+                                 "SET Nposti = Nposti - " + numBig +
+                                 " WHERE ID = '" + LoginInfo.IdEvento + "'";
+
+                MySqlCommand commandE = new MySqlCommand(queryE, con.cn);
+                commandE.ExecuteNonQuery();
+                con.cn.Close();
+
+                MessageBox.Show("Acquisto riusciuto con successo, costo totale: €" + costo.ToString());
+
+                this.Close();
+            }else
+            {
+                MessageBox.Show("MI DISPIACE MA QUEST'EVENTO E' GIA' SOLD OUT");
+
+                this.Close();
             }
-            string queryE = "UPDATE eventi " +
-                             "SET Nposti = Nposti - " + numBig +
-                             " WHERE ID = '" + LoginInfo.IdEvento + "'";
 
-            MySqlCommand commandE = new MySqlCommand(queryE, con.cn);
-            commandE.ExecuteNonQuery();
-            con.cn.Close();
-
-            MessageBox.Show("Acquisto riusciuto con successo, costo totale: €" + costo.ToString());
-
-            this.Close();
+            
         }
     }
 }

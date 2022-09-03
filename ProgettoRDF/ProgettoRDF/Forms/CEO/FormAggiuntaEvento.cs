@@ -19,6 +19,8 @@ namespace ProgettoRDF.Forms.CEO
         DataTable dt = new DataTable();
         DataTable dt2 = new DataTable();
         DataTable dt3 = new DataTable();
+        MySqlDataAdapter dt4;
+        DataTable DataTablePosti = new DataTable();
 
         public FormAggiuntaEvento()
         {
@@ -64,55 +66,76 @@ namespace ProgettoRDF.Forms.CEO
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
-            try
+            con.cn.Open();
+
+            string queryPosti = "SELECT Nposti " +
+                                "FROM eventi " +
+                                "WHERE ID = '" + LoginInfo.IdEvento + "'";
+
+            dt4 = new MySqlDataAdapter(queryPosti, con.cn);
+            dt4.Fill(DataTablePosti);
+            DataRow[] righe = DataTablePosti.Select();
+            string postiSelect = righe[0]["Nposti"].ToString();
+            int Nposti = Int32.Parse(postiSelect);
+
+
+            if (Nposti > 0)
             {
-                con.cn.Open();
+                try
+                {
+                    DataTable DataTableID = new DataTable();
+                    string queryID = "SELECT c.CODOrganizzazione " +             //PRENDO IL CODICE DELL'ORGANIZZAZIONE POSSEDUTA DAL CEO
+                                      "FROM ceo_organizzazioni c " +               //CHE HA EFFETTUATO IL LOGIN PRIMA TRAMITE L'ID SALVATO
+                                      "WHERE c.ID = '" + LoginInfo.UserID + "'";  //IN LOGININFO
+                    da = new MySqlDataAdapter(queryID, con.cn);
+                    da.Fill(DataTableID);
+                    string idS = DataTableID.Rows[0]["CODOrganizzazione"].ToString();
+                    int ID = Int32.Parse(idS);
 
-                DataTable DataTableID = new DataTable();
-                string queryID =  "SELECT c.CODOrganizzazione " +             //PRENDO IL CODICE DELL'ORGANIZZAZIONE POSSEDUTA DAL CEO
-                                  "FROM ceo_organizzazioni c " +               //CHE HA EFFETTUATO IL LOGIN PRIMA TRAMITE L'ID SALVATO
-                                  "WHERE c.ID = '" + LoginInfo.UserID + "'";  //IN LOGININFO
-                da = new MySqlDataAdapter(queryID, con.cn);
-                da.Fill(DataTableID);
-                string idS = DataTableID.Rows[0]["CODOrganizzazione"].ToString();
-                int ID  = Int32.Parse(idS);
-                
-                MessageBox.Show(ID.ToString());
-                string queryEvento = $"INSERT INTO eventi (`ID`, `Nome`, `Genere`, `Luogo`, `Descrizione`, `Nposti`, `CODOrganizzazione`) VALUES ('', '" + txtNome.Text + "', '" + txtGenere.Text + "', '" + txtLuogo.Text + "', '" + txtDescrizione.Text + "', '" + txtPosti.Text + "', '" + ID + "')";
+                    //MessageBox.Show(ID.ToString());
+                    string queryEvento = $"INSERT INTO eventi (`ID`, `Nome`, `Genere`, `Luogo`, `Descrizione`, `Nposti`, `CODOrganizzazione`) VALUES ('', '" + txtNome.Text + "', '" + txtGenere.Text + "', '" + txtLuogo.Text + "', '" + txtDescrizione.Text + "', '" + txtPosti.Text + "', '" + ID + "')";
 
-                db = new MySqlDataAdapter(queryEvento, con.cn);
-                db.Fill(dt);
+                    db = new MySqlDataAdapter(queryEvento, con.cn);
+                    db.Fill(dt);
 
-                string qId = "SELECT ID " +
-                             "FROM EVENTI WHERE Nome = '" + txtNome.Text + "'"; //QUERY CHE  PERMETTE DI TROVARE L'ID DELL'EVENTO APPENA INSERITO 
+                    string qId = "SELECT ID " +
+                                 "FROM EVENTI WHERE Nome = '" + txtNome.Text + "'"; //QUERY CHE  PERMETTE DI TROVARE L'ID DELL'EVENTO APPENA INSERITO 
 
-                MySqlDataAdapter da1 = new MySqlDataAdapter(qId, con.cn);                 
-                da1.Fill(dt3);
+                    MySqlDataAdapter da1 = new MySqlDataAdapter(qId, con.cn);
+                    da1.Fill(dt3);
 
-                LoginInfo.IdEvento = Int32.Parse(dt3.Rows[0]["ID"].ToString());
-                                            //CREAZIONE DEL BIGLIETTO COLLEGATO ALL'EVENTO APPENA CREATO
-                string queryBiglietto = $"INSERT INTO biglietti (`ID`, `Costo`, `CODEvento`) VALUES ('', '" + txtCosto.Text + "', '" + LoginInfo.IdEvento + "')";
-                                                
-                ds = new MySqlDataAdapter(queryBiglietto, con.cn);
-                ds.Fill(dt2);
+                    LoginInfo.IdEvento = Int32.Parse(dt3.Rows[0]["ID"].ToString());
+                    //CREAZIONE DEL BIGLIETTO COLLEGATO ALL'EVENTO APPENA CREATO
+                    string queryBiglietto = $"INSERT INTO biglietti (`ID`, `Costo`, `CODEvento`) VALUES ('', '" + txtCosto.Text + "', '" + LoginInfo.IdEvento + "')";
 
-                txtNome.Clear();
-                txtGenere.Clear();
-                txtLuogo.Clear();
-                txtDescrizione.Clear();
-                txtPosti.Clear();
+                    ds = new MySqlDataAdapter(queryBiglietto, con.cn);
+                    ds.Fill(dt2);
 
-                MessageBox.Show("Evento Aggiunto con successo");
+                    txtNome.Clear();
+                    txtGenere.Clear();
+                    txtLuogo.Clear();
+                    txtDescrizione.Clear();
+                    txtPosti.Clear();
+
+                    MessageBox.Show("Evento Aggiunto con successo");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.cn.Close();
+                }
+            }else
+            {
+                MessageBox.Show("MI DISPIACE MA QUEST'EVENTO E' GIA' SOLD OUT");
+
                 this.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.cn.Close();
-            }
+
+            
         }
     }
 }
