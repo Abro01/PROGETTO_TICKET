@@ -71,8 +71,6 @@ namespace ProgettoRDF.Forms.CEO
         {
             string idEvento = dtRisultati.Rows[e.RowIndex].Cells["Id"].Value.ToString();
             LoginInfo.IdEvento = Int16.Parse(idEvento);
-            //EventiInfo ei = new EventiInfo();
-            //ei.Show();
             FormInfoEventi fa = new FormInfoEventi();
             fa.Show();
             this.Hide();

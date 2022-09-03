@@ -45,10 +45,11 @@
             this.btnCerca.FlatAppearance.BorderSize = 0;
             this.btnCerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCerca.Location = new System.Drawing.Point(879, 76);
+            this.btnCerca.Location = new System.Drawing.Point(586, 49);
+            this.btnCerca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerca.Name = "btnCerca";
             this.btnCerca.Radius_bordo = 40;
-            this.btnCerca.Size = new System.Drawing.Size(166, 60);
+            this.btnCerca.Size = new System.Drawing.Size(111, 39);
             this.btnCerca.Size_bordo = 2;
             this.btnCerca.TabIndex = 29;
             this.btnCerca.Text = "CERCA";
@@ -61,29 +62,30 @@
             this.lblNomeEvento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNomeEvento.AutoSize = true;
             this.lblNomeEvento.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeEvento.Location = new System.Drawing.Point(238, 85);
+            this.lblNomeEvento.Location = new System.Drawing.Point(159, 55);
+            this.lblNomeEvento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomeEvento.Name = "lblNomeEvento";
-            this.lblNomeEvento.Size = new System.Drawing.Size(177, 35);
+            this.lblNomeEvento.Size = new System.Drawing.Size(118, 23);
             this.lblNomeEvento.TabIndex = 28;
             this.lblNomeEvento.Text = "Nome Evento:";
             // 
             // txtNomeEvento
             // 
             this.txtNomeEvento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNomeEvento.Location = new System.Drawing.Point(445, 94);
+            this.txtNomeEvento.Location = new System.Drawing.Point(297, 61);
+            this.txtNomeEvento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNomeEvento.Name = "txtNomeEvento";
-            this.txtNomeEvento.Size = new System.Drawing.Size(404, 26);
+            this.txtNomeEvento.Size = new System.Drawing.Size(271, 20);
             this.txtNomeEvento.TabIndex = 27;
             // 
             // dtRisultati
             // 
             this.dtRisultati.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtRisultati.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtRisultati.Location = new System.Drawing.Point(229, 180);
-            this.dtRisultati.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtRisultati.Location = new System.Drawing.Point(95, 117);
             this.dtRisultati.Name = "dtRisultati";
             this.dtRisultati.RowHeadersWidth = 62;
-            this.dtRisultati.Size = new System.Drawing.Size(800, 300);
+            this.dtRisultati.Size = new System.Drawing.Size(665, 195);
             this.dtRisultati.TabIndex = 26;
             this.dtRisultati.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRisultati_CellContentClick);
             // 
@@ -96,10 +98,11 @@
             this.btnAggiungi.FlatAppearance.BorderSize = 0;
             this.btnAggiungi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAggiungi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnAggiungi.Location = new System.Drawing.Point(546, 515);
+            this.btnAggiungi.Location = new System.Drawing.Point(364, 335);
+            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Radius_bordo = 40;
-            this.btnAggiungi.Size = new System.Drawing.Size(166, 60);
+            this.btnAggiungi.Size = new System.Drawing.Size(111, 39);
             this.btnAggiungi.Size_bordo = 2;
             this.btnAggiungi.TabIndex = 30;
             this.btnAggiungi.Text = "AGGIUNGI UN EVENTO";
@@ -109,15 +112,16 @@
             // 
             // FormListaEventiCEO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1236, 608);
+            this.ClientSize = new System.Drawing.Size(824, 395);
             this.Controls.Add(this.btnAggiungi);
             this.Controls.Add(this.btnCerca);
             this.Controls.Add(this.lblNomeEvento);
             this.Controls.Add(this.txtNomeEvento);
             this.Controls.Add(this.dtRisultati);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormListaEventiCEO";
             this.Text = "Lista Eventi";
             this.Load += new System.EventHandler(this.FormListaEventi_Load);

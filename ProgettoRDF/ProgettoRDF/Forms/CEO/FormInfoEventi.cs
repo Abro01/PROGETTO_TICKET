@@ -46,9 +46,10 @@ namespace ProgettoRDF.Forms.CEO
             con.cn.Open();
             try
             {
-                string query = "SELECT u.Nome, u.Cognome, u.Username, u.Email " +
-                               "FROM utenti u, organizzazione o, eventi e, biglietti b, utenti_biglietti ub, ceo_organizzazioni c " +
-                               "WHERE o.ID=e.CODOrganizzazione AND e.ID=b.CODEvento AND b.ID=ub.CODBiglietto AND ub.CODUtente=u.ID";
+                   string query="SELECT u.Nome, u.Cognome, u.Username, u.Email " +
+                                "FROM utenti u, biglietti b, utenti_biglietti ub " +
+                                "WHERE b.ID=ub.CODBiglietto AND ub.CODUtente=u.ID " +
+                                "AND b.CODEvento = '" +LoginInfo.IdEvento +"'";
 
                 command = new MySqlCommand(query, con.cn);
                 da = new MySqlDataAdapter(command);

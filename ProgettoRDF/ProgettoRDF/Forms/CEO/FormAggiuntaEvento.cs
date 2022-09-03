@@ -117,6 +117,9 @@ namespace ProgettoRDF.Forms.CEO
                 txtLuogo.Clear();
                 txtDescrizione.Clear();
                 txtPosti.Clear();
+
+                MessageBox.Show("Evento Aggiunto con successo");
+                this.Close();
             }
             catch (Exception ex)
             {
